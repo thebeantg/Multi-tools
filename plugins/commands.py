@@ -90,48 +90,6 @@ async def photoid(bot, message):
        await message.reply("Oops !! Not a  Photo")
 
 
-@Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
-async def broadcast(bot, message):
- if (message.reply_to_message):
-   ms = await message.reply_text("Geting All ids from database ...........")
-   ids = getid()
-   tot = len(ids)
-   success = 0 
-   failed = 0 
-   await ms.edit(f"Starting Broadcast .... \n Sending Message To {tot} Users")
-   for id in ids:
-     try:
-     	time.sleep(0.5)
-     	await message.reply_to_message.copy(id)
-     	success += 1 
-     except:
-     	failed += 1 
-     	pass
-     try:
-     	await ms.edit(B_TEXT.format(success=success, failed=failed, tot=tot))
-     except FloodWait as e:
-     	await asyncio.sleep(t.x)
-
-
-@Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["users"]))
-async def get_users(bot, message):    
-    a = await message.reply_text(text="<b>Processing</b>")
-    await asyncio.sleep(0.5)
-    b = await a.edit("<b>Processing ● </b>")
-    await asyncio.sleep(0.5)
-    c = await b.edit("<b>Processing ● ● </b>")
-    await asyncio.sleep(0.5)
-    d = await c.edit("<b>Processing ● ● ● </b>")
-    await asyncio.sleep(0.5)
-    e = await d.edit("<b>Processing ● ● ● ● </b>")
-    await asyncio.sleep(0.5)
-    f = await e.edit("<b>Processing ● ● ● ● ● </b>")
-    await asyncio.sleep(0.5)
-    ids = getid()
-    tot = len(ids)
-    await f.edit(f"Total uses = {tot}")
-
-
 @Client.on_message(filters.command("logosq") & filters.incoming & filters.text & ~filters.forwarded & filters.private)
 async def logosq(bot, message):
     kikked = await BanChek(bot, message)
