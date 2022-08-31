@@ -12,6 +12,8 @@ ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.
 
 DB_URL = os.environ.get("DB_URL", "")
 
+DB_NAME = os.environ.get("DB_NAME", "")
+
 DELAY = int(os.environ.get("DELAY", "1"))
 
 FORCE_SUB = os.environ.get("FORCE_SUB", None)           
@@ -31,15 +33,15 @@ LOG_TEXT = """<i><u>👁️‍🗨️USER DETAILS</u>
 
 By = {bot}</i>"""
 
+#  ❓️❓️ BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
 
-B_TEXT = """🍁 ʙʀᴏᴀᴅᴄᴀꜱᴛ ꜱᴛᴀʀᴛᴇᴅ 🍁 
-╭━━━━━━━━━━━━━━━━━➣
-┣⪼📯 ᴛᴏᴛᴀʟ - <code>{tot}</code>
-┣⪼✅️ ᴅᴏɴᴇ - <code>{success}</code>
-┣⪼❌️ ꜰᴀɪʟᴇᴅ - <code>{failed}</code>
-╰━━━━━━━━━━━━━━━━━➣ """
 
-BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
+
+
+
+
+
+
 
 
 
