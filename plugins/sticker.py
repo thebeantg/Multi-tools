@@ -23,7 +23,7 @@ from plugins.utils.files import (
     resize_file_to_sticker_size,
     upload_document,
 )
-from wbb.utils.stickerset import (
+from plugins.utils.stickerset import (
     add_sticker_to_set,
     create_sticker,
     create_sticker_set,
