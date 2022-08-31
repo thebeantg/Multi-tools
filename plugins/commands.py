@@ -4,7 +4,6 @@ from pyrogram.errors import FloodWait
 from helper.ban import BanChek
 from helper.utils import not_subscribed
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
-from helper.database import db
 from helper.add_new import add_user
 from variables import STAT_STICK, PICS, ADMIN, DELAY, B_TEXT
 from plugins.logo_maker import generate_logo
