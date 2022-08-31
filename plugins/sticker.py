@@ -17,7 +17,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from variables import BOT_USERNAME
 
-from wbb.core.decorators.errors import capture_err
+from helper.errors import capture_err
 from wbb.utils.files import (
     get_document_from_file_id,
     resize_file_to_sticker_size,
