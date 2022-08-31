@@ -3,7 +3,7 @@ import os
 from asyncio import gather
 from traceback import format_exc
 
-from pyrogram import filters
+from pyrogram import filters, Client 
 from pyrogram.errors import (
     PeerIdInvalid,
     ShortnameOccupyFailed,
@@ -37,7 +37,7 @@ MAX_STICKERS = (
 SUPPORTED_TYPES = ["jpeg", "png", "webp"]
 
 
-@app.on_message(filters.command("sticker_id") & ~filters.edited)
+@Client.on_message(filters.command("sticker_id") & ~filters.edited)
 @capture_err
 async def sticker_id(_, message: Message):
     reply = message.reply_to_message
@@ -51,7 +51,7 @@ async def sticker_id(_, message: Message):
     await message.reply_text(f"`{reply.sticker.file_id}`")
 
 
-@app.on_message(filters.command("get_sticker") & ~filters.edited)
+@Client.on_message(filters.command("get_sticker") & ~filters.edited)
 @capture_err
 async def sticker_image(_, message: Message):
     r = message.reply_to_message
@@ -76,39 +76,9 @@ async def sticker_image(_, message: Message):
     os.remove(f)
 
 
-@app2.on_message(
-    filters.command("kang", prefixes=USERBOT_PREFIX) & SUDOERS,
-)
-async def userbot_kang(_, message: Message):
-    reply = message.reply_to_message
-
-    if not reply:
-        return await message.reply_text("Reply to a sticker/image to kang it.")
-
-    sticker_m = await reply.forward(BOT_USERNAME)
-
-    # Send /kang message to bot and listen to his reply concurrently
-    bot_reply, kang_m_bot = await gather(
-        app2.listen(BOT_USERNAME, filters=~filters.me),
-        sticker_m.reply(message.text.replace(USERBOT_PREFIX, "/")),
-    )
-
-    # Edit init message of ubot with the reply of
-    # bot we got in the previous block
-    bot_reply, ub_m = await gather(
-        app2.listen(BOT_USERNAME, filters=~filters.me),
-        eor(message, text=bot_reply.text.markdown),
-    )
-
-    # Edit the main userbot message with bot's final edit
-    await ub_m.edit(bot_reply.text.markdown)
-
-    # Delete all extra messages.
-    for m in [bot_reply, kang_m_bot, sticker_m]:
-        await m.delete()
 
 
-@app.on_message(filters.command("kang") & ~filters.edited)
+@Client.on_message(filters.command("kang") & ~filters.edited)
 @capture_err
 async def kang(client, message: Message):
     if not message.reply_to_message:
@@ -129,7 +99,7 @@ async def kang(client, message: Message):
     ):
         sticker_emoji = message.reply_to_message.sticker.emoji
     else:
-        sticker_emoji = "🤔"
+        sticker_emoji = "😎"
 
     # Get the corresponding fileid, resize the file if necessary
     doc = message.reply_to_message.photo or message.reply_to_message.document
