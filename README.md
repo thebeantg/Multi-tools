@@ -1,6 +1,5 @@
 
-# TG MULTI BOT <img src="https://telegra.ph//file/53b5ad3b2774b8c47a7a6.jpg?color=black&logo=github&logoColor=black&style=social" alt="RELEASE">
-
+# TG MULTI BOT  
 
 
 
@@ -10,10 +9,8 @@
 
 ### What is this bot
 
-This is a pyrogram based telagram bot. Telagram user id, info, telagrph, stickerid, fun, etc....
+This is a pyrogram based telagram bot. Telagram user id, info, telagraph, stickerid, fun, etc....
 
-### 🚀 Add `LOG_CHANNEL` support 
-### 🥳 It has `UPSTREAM_REPO` support 🤩
 
 ### Deploy to Heroku
 
@@ -31,7 +28,7 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagrph, sticker
 
 ---------
 ### Developers 
-<a href="https://t.me/JP_Jeol"><img src="https://img.shields.io/badge/JP%20 JEOL-ReD.svg?style=for-the-badge&logo=Python"></a>
+<a href="https://t.me/about_jeol"><img src="https://img.shields.io/badge/JP%20 JEOL-ReD.svg?style=for-the-badge&logo=Python"></a>
 <a href="https://t.me/mr_MKN"><img src="https://img.shields.io/badge/MR%20 MKN-ReD.svg?style=for-the-badge&logo=Python"></a>
 ---------
 <p align="center">
@@ -46,7 +43,7 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagrph, sticker
 </p>
 
 ## Support & Updates 
-<a href="https://t.me/BETA_BOTSUPPORT"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/BETA_UPDATES"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/BETA_SUPPORT"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/BETA_BOTZ"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
   
 
 
