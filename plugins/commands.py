@@ -2,11 +2,11 @@ from pyrogram import Client, filters, idle
 import pyrogram
 from pyrogram.errors import FloodWait
 from helper.ban import BanChek
-from helper.motor_db import db
 from helper.utils import not_subscribed
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
-from helper.database import insert, getid
-from variables import STAT_STICK, PICS, ADMIN, DELAY, LOG_CHANNEL, LOG_TEXT, B_TEXT
+from helper.database import db
+from helper.add_new import add_user
+from variables import STAT_STICK, PICS, ADMIN, DELAY, B_TEXT
 from plugins.logo_maker import generate_logo
 import asyncio
 import random
@@ -29,7 +29,7 @@ async def start_message(bot, message):
        kikked = await BanChek(bot, message)
        if kikked == 400:
            return
-       insert(int(message.chat.id))
+       await add_user(bot, message)     
        await message.reply_chat_action("Typing")    
        m=await message.reply_sticker(STAT_STICK)
        await asyncio.sleep(DELAY)
@@ -49,10 +49,7 @@ async def start_message(bot, message):
                ]]
                )
            )
-       if not await db.is_user_exist(message.from_user.id):
-          await db.add_user(message.from_user.id)
-          await bot.send_message(LOG_CHANNEL, text=LOG_TEXT.format(id=message.from_user.id, dc_id=message.from_user.dc_id, first_name=message.from_user.first_name, username=message.from_user.username, bot=bot.mention))
-
+       
          
 @Client.on_message(filters.command("id"))
 async def id_message(bot, message):
