@@ -18,60 +18,52 @@ async def is_not_subscribed(client, message):
            )
        )
 
-@Client.on_message(filters.private & filters.command(["tgmedia", "tgraph", "telegraph"]))
-async def telegraph(client, message):
-    kikked = await BanChek(client, message)
-    if kikked == 400:
-        return 
-    replied = message.reply_to_message
-    if not replied:
-        await message.reply("Reply to a supported media file")
-        return
-    if not (
-        (replied.photo and replied.photo.file_size <= 5242880)
-        or (replied.animation and replied.animation.file_size <= 5242880)
-        or (
-            replied.video
-            and replied.video.file_name.endswith(".mp4")
-            and replied.video.file_size <= 5242880
-        )
-        or (
-            replied.document
-            and replied.document.file_name.endswith(
-                (".jpg", ".jpeg", ".png", ".gif", ".mp4"),
-            )
-            and replied.document.file_size <= 5242880
-        )
-    ):
-        await message.reply("Not supported!")
-        return    
-    download_location = await client.download_media(
-        message=message.reply_to_message,
-        file_name="root/downloads/",
-    )
-    mkn=await message.reply_text(
-        text="<code>Trying to processing please weit.....</code>",
+@Client.on_message(filters.media & filters.private)
+async def telegraph_upload(bot, update):
+    
+    if not await db.is_user_exist(update.from_user.id):
+        await db.add_user(update.from_user.id)
+    
+    text = await update.reply_text(
+        text="<code>Downloading to My Server ...</code>",
         disable_web_page_preview=True
     )
-    await asyncio.sleep(2)
-    await mkn.delete()
+    media = await update.download()
+    
+    await text.edit_text(
+        text="<code>Downloading Completed. Now I am Uploading to telegra.ph Link ...</code>",
+        disable_web_page_preview=True
+    )
+    
     try:
-        response = upload_file(download_location)
-    except Exception as document:
-        await message.reply(message, text=document)
-    else:
-        await message.reply(
-            text=f"<b>Link:-</b>\n\n <code>https://graph.org{response[0]}</code>",
-            quote=True,
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(text="open link", url=f"https://graph.org{response[0]}"),
-                    InlineKeyboardButton(text="share link", url=f"https://graph.org.me/share/url?url=https://graph.org{response[0]}")
-                ],
-                [InlineKeyboardButton(text="✗ Close ✗", callback_data="close")]
-            ]
+        response = upload_file(media)
+    except Exception as error:
+        print(error)
+        await text.edit_text(
+            text=f"Error :- {error}",
+            disable_web_page_preview=True
+        )
+        return
+    
+    try:
+        os.remove(media)
+    except Exception as error:
+        print(error)
+        return
+    
+    await text.edit_text(
+        text=f"<b>Link :-</b> <code>https://graph.org{response[0]}",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton(text="Open Link", url=f"https://graph.org{response[0]}"),
+            InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://graph.org{response[0]}")
+            ]]
         )
     )
-    finally:
-        os.remove(download_location)
+
+
+
+
+
+
+
