@@ -39,6 +39,7 @@ B_TEXT = """🍁 ʙʀᴏᴀᴅᴄᴀꜱᴛ ꜱᴛᴀʀᴛᴇᴅ 🍁
 ┣⪼❌️ ꜰᴀɪʟᴇᴅ - <code>{failed}</code>
 ╰━━━━━━━━━━━━━━━━━➣ """
 
+BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
 
 
 
