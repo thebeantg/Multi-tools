@@ -20,10 +20,9 @@ async def is_not_subscribed(client, message):
 
 @Client.on_message(filters.media & filters.private)
 async def telegraph_upload(bot, update):
-    
-    if not await db.is_user_exist(update.from_user.id):
-        await db.add_user(update.from_user.id)
-    
+    kikked = await BanChek(bot, update)
+    if kikked == 400:
+        return 
     text = await update.reply_text(
         text="<code>Downloading to My Server ...</code>",
         disable_web_page_preview=True
