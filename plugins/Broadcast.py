@@ -30,8 +30,8 @@ async def send_msg(user_id, message):
     except Exception as e:
         return 500, f"{user_id} : {traceback.format_exc()}\n"
 
-@Client.on_message(filters.command(["broadcast", "b"]) & filters.user(ADMIN))
-async def broadcast_handler(m: Message):
+@Client.on_message(filters.command("broadcast") & filters.user(ADMIN)  & filters.reply)
+async def broadcast_handler(bot: Client, m: Message):
     all_users = await db.get_all_users()
     broadcast_msg = m.reply_to_message
     while True:
