@@ -1,10 +1,10 @@
 from pyrogram import filters, Client
 
 from helper.errors import capture_err
-from wbb.utils.functions import make_carbon
+from plugins.utils.functions import make_carbon
 
 
-@app.on_message(
+@Client.on_message(
     filters.command("carbon")
     & ~filters.edited
 )
