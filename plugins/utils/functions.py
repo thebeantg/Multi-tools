@@ -13,9 +13,11 @@ import speedtest
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 from pyrogram.types import Message
 
-from wbb import aiohttpsession as aiosession
 from plugins.utils.dbfunctions import start_restart_stage
 from plugins.utils.http import get, post
+from aiohttp import ClientSession
+
+aiohttpsession = ClientSession()
 
 
 async def restart(m: Message):
