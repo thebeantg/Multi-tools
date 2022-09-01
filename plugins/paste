@@ -8,15 +8,13 @@ from pyrogram.types import Message
 from wbb import SUDOERS, USERBOT_PREFIX, app, app2, eor
 from wbb.core.decorators.errors import capture_err
 from wbb.core.keyboard import ikb
-from wbb.utils.pastebin import paste
-
-__MODULE__ = "Paste"
-__HELP__ = "/paste - To Paste Replied Text Or Document To A Pastebin"
+from plugins.utils.pastebin import paste
+ 
 pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
 
 
-@app2.on_message(filters.command("paste", prefixes=USERBOT_PREFIX) & SUDOERS)
-@app.on_message(filters.command("paste") & ~filters.edited)
+
+@Client.on_message(filters.command("paste") & ~filters.edited)
 @capture_err
 async def paste_func(_, message: Message):
     if not message.reply_to_message:
