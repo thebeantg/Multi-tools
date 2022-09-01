@@ -3,6 +3,13 @@ from pyrogram import filters, Client
 from helper.errors import capture_err
 from plugins.utils.functions import make_carbon
 
+C = "**MADE WITH ❤️ BY >JEOL**"
+F = InlineKeyboardMarkup(
+[[
+     InlineKeyboardButton("JOIN CHANNEL", url="https://t.me/beta_boTZ")
+]]
+)
+
 
 @Client.on_message(
     filters.command("carbon")
