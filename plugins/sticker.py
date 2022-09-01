@@ -16,8 +16,6 @@ from pyrogram.errors import (
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
-from variables import BOT_USERNAME
-
 from helper.errors import capture_err
 from plugins.utils.files import (
     get_document_from_file_id,
@@ -82,6 +80,7 @@ async def sticker_image(_, message: Message):
 @Client.on_message(filters.command("kang") & ~filters.edited)
 @capture_err
 async def kang(client, message: Message):
+    BOT_USERNAME = Client.username
     if not message.reply_to_message:
         return await message.reply_text("Reply to a sticker/image to kang it.")
     if not message.from_user:
