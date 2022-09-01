@@ -6,7 +6,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from helper.errors import capture_err
-from wbb.core.keyboard import ikb
+from helper.keyboard import ikb
 from plugins.utils.pastebin import paste
  
 pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
