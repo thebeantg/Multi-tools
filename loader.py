@@ -43,7 +43,7 @@ class App(Client):
             logging.warning(e) 
             logging.warning("Make Sure Bot admin in force sub channel") 
             self.force_channel = None
-       logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")          
+       logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on @{me.username}.")          
 
     async def stop(self, *args):
        await super().stop()
