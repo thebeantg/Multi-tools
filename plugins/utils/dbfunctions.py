@@ -5,6 +5,7 @@ from string import ascii_lowercase
 from typing import Dict, List, Union
 
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
+from variables import DB_URL as MONGO_URL
 
 mongo_client = MongoClient(MONGO_URL)
 db = mongo_client.plugins
