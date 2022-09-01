@@ -51,7 +51,7 @@ async def telegraph_upload(bot, update):
         return
     
     await text.edit_text(
-        text=f"<b>Link :-</b> <code>https://graph.org{response[0]}",
+        text=f"<b>Link :-</b> <code>https://graph.org{response[0]}</code>",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton(text="Open Link", url=f"https://graph.org{response[0]}"),
