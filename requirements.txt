@@ -11,5 +11,5 @@ motor
 aiofiles
 Pillow
 humanize
-
-
+psutil
+pykeyboard
