@@ -5,7 +5,7 @@ import asyncio
 import datetime
 import aiofiles.os
 import traceback
-from variables ADMIN
+from variables import ADMIN
 from pyrogram import Client, filters 
 from helper.database import db
 from pyrogram.types import Message
