@@ -2,7 +2,7 @@ import os
 import re
 
 import aiofiles
-from pyrogram import filters
+from pyrogram import filters, Client
 from pyrogram.types import Message
 
 from helper.errors import capture_err
