@@ -7,7 +7,6 @@ from helper.fsub import ForceSub
 
 @Client.on_message(filters.private & filters.forwarded)
 async def info(motech, msg):
-    await AddUserToDatabase(motech, msg)
     FSub = await ForceSub(motech, msg)
     if FSub == 400:
         return
