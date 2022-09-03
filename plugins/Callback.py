@@ -33,7 +33,7 @@ To Make Square Logo -  /logosq Your Name
 🤩THANKS FOR USING ME😍
 """,       
            reply_markup=InlineKeyboardMarkup( [[
-                  InlineKeyboardButton("🤖 𝐌𝐘 𝐁𝐎𝐓𝐒", url="https://t.me/BETA_BOTZ/86")
+                  InlineKeyboardButton("🤖 𝐌𝐘 𝐁𝐎𝐓𝐒", url="https://t.me/BETA_BOTZ/86"),
                   InlineKeyboardButton("🔍 SOURCE CODE", url="https://github.com/Jeolpaul/TG-MULTI-BOT")
                   ],[
                   InlineKeyboardButton("🤘🏻 DEVELOPER", callback_data="devs"),
