@@ -2,7 +2,10 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram import filters
 from MULTIBOT import Client
 
-"""Edit ചെയ്യുന്നവനോട്.. നിന്റെ തന്ത അല്ല ഈ code ഉണ്ടാക്കിയത്"""
+__MODULE__ = "Editor"
+__HELP__ = """
+Image Editor | Send Me Any Image To See Magic
+"""
 
 @Client.on_message(filters.photo & filters.private)
 async def photo(client: Client, message: Message):
