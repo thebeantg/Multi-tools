@@ -3,6 +3,17 @@ import asyncio
 import os
 import subprocess
 import time
+import os
+import math
+import time
+import heroku3
+import requests
+from variables import ADMIN, HEROKU_API_KEY
+from pyrogram import filters
+
+CMD = ['.', '/']
+
+BOT_START_TIME = time.time()
 
 import psutil
 from pyrogram import filters
@@ -55,19 +66,6 @@ DISK: {disk}%
 
 
 # dyno
-
-
-
-import os
-import math
-import time
-import heroku3
-import requests
-from variables import ADMIN, HEROKU_API_KEY
-from pyrogram import filters
-
-CMD = ['.', '/']
-BOT_START_TIME = time.time()
 
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command("dyno", CMD))         
 async def bot_status(client,message):
