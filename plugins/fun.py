@@ -1,9 +1,5 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from plugins.helper_functions.cust_p_filters import f_onw_fliter
-from helper.utils import not_subscribed
-from helper.ban import BanChek
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 import random
 
 
@@ -58,87 +54,38 @@ IKKA_STRINGS = (
 ) 
 
 
-@Client.on_message(filters.private & filters.create(not_subscribed))
-async def is_not_subscribed(client, message):
-    await message.reply_text(
-       text="**⚠️Sorry bro,You didn't Joined Our Updates Channel Join now and start again🙏**",
-       reply_markup=InlineKeyboardMarkup( [[
-           InlineKeyboardButton(text="📢𝙹𝚘𝚒𝚗 𝙼𝚢 𝚄𝚙𝚍𝚊𝚝𝚎 𝙲𝚑𝚊𝚗𝚗𝚎𝚕📢", url=client.invitelink)
-           ],[
-           InlineKeyboardButton("🔄 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗 🔄", url=f"https://t.me/{client.username}?start=start")            
-           ]]
-           )
-       )
-
 @Client.on_message(filters.command("dice"))
 async def roll_dice(bot, message):
-    kikked = await BanChek(bot, message)
-    if kikked == 400:
-        return 
     await bot.send_dice(message.chat.id, "🎲")
 
 @Client.on_message(filters.command("arrow"))                                      
 async def roll_arrow(bot, message):
-    kikked = await BanChek(bot, message)
-    if kikked == 400:
-        return 
     await bot.send_dice(message.chat.id, "🎯")
 
 @Client.on_message(filters.command("goal"))
 async def roll_goal(bot, message):
-    kikked = await BanChek(bot, message)
-    if kikked == 400:
-        return 
     await bot.send_dice(message.chat.id, "⚽️")
 
 @Client.on_message(filters.command("luck"))
 async def roll_luck(bot, message):
-    kikked = await BanChek(bot, message)
-    if kikked == 400:
-        return 
     await bot.send_dice(message.chat.id, "🎰")
 
 @Client.on_message(filters.command("throw"))
 async def roll_throw(bot, message):
-    kikked = await BanChek(bot, message)
-    if kikked == 400:
-        return 
     await bot.send_dice(message.chat.id, "🏀")
 
 @Client.on_message(filters.command(["bowling", "tenpins"]))
 async def roll_bowling(bot, message):
-    kikked = await BanChek(bot, message)
-    if kikked == 400:
-        return 
     await bot.send_dice(message.chat.id, "🎳")
 
-
-@Client.on_message(filters.command("runs") &
-    f_onw_fliter
-)
+@Client.on_message(filters.command("runs"))
 async def runs(bot, message):
-    kikked = await BanChek(bot, message)
-    if kikked == 400:
-        return 
-    """ /runs strings """
-    effective_string = random.choice(RUN_STRINGS)
-    if message.reply_to_message:
-        await message.reply_to_message.reply_text(effective_string)
-    else:
-        await message.reply_text(effective_string)
+    fun_txt = random.choice(RUN_STRINGS)
+    await message.reply_text(fun_txt)
 
-@Client.on_message(filters.command("ikka") &
-    f_onw_fliter
-)
+@Client.on_message(filters.command("ikka"))
 async def ikka(bot, message):
-    kikked = await BanChek(bot, message)
-    if kikked == 400:
-        return 
-    """ /ikka strings """
-    effective_string = random.choice(IKKA_STRINGS)
-    if message.reply_to_message:
-        await message.reply_to_message.reply_sticker(effective_string)
-    else:
-        await message.reply_sticker(effective_string)
+    pic = random.choice(IKKA_STRINGS)
+    await message.reply_sticker(pic)
 
 
