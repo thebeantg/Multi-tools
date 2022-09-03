@@ -22,6 +22,7 @@ class App(Client):
 
        
 print('bot started......⚡️')  
+
 bot = App()
 bot.run()
 
