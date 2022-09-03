@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from telegraph import upload_file
 from helper.fsub import ForceSub
-from multibot import Client
+from MULTIBOT import Client
 
 __MODULE__ = "Telegraph"
 __HELP__ = """
