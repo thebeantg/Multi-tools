@@ -16,5 +16,5 @@ async def repo(client, message):
     for user in users:
         list_of_users += (f"**{count}.** [{user['login']}]({user['html_url']})\n")       
         count += 1
-    text = f"""[Github](https://github.com/Jeolpaul/TG-MULTI-BOT) | [Updates](t.me/beta_botz)\n```----------------\n| Contributors |\n----------------```\n{list_of_users}"""
+    text = f"""[Repo](https://github.com/Jeolpaul/TG-MULTI-BOT) | [Updates](t.me/beta_botz)\n```----------------\n| Contributors |\n----------------```\n{list_of_users}"""
     await client.send_message(chat_id=message.chat.id, text=text, disable_web_page_preview=True)
