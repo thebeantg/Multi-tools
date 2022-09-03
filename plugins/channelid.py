@@ -2,26 +2,15 @@ from pyrogram import filters
 from pyrogram import Client
 from pyrogram.file_id import FileId
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from helper.utils import not_subscribed
-from helper.ban import BanChek
+from helper.fsub import ForceSub
 
-@Client.on_message(filters.private & filters.create(not_subscribed))
-async def is_not_subscribed(client, message):
-    await message.reply_text(
-       text="**⚠️Sorry bro,You didn't Joined Our Updates Channel Join now and start again🙏**",
-       reply_markup=InlineKeyboardMarkup( [[
-           InlineKeyboardButton(text="📢𝙹𝚘𝚒𝚗 𝙼𝚢 𝚄𝚙𝚍𝚊𝚝𝚎 𝙲𝚑𝚊𝚗𝚗𝚎𝚕📢", url=client.invitelink)
-           ],[
-           InlineKeyboardButton("🔄 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗 🔄", url=f"https://t.me/{client.username}?start=start")            
-           ]]
-           )
-       )
 
 @Client.on_message(filters.private & filters.forwarded)
 async def info(motech, msg):
-    kikked = await BanChek(motech, msg)
-    if kikked == 400:
-        return 
+    await AddUserToDatabase(motech, msg)
+    FSub = await ForceSub(motech, msg)
+    if FSub == 400:
+        return
     if msg.forward_from:
         text = "<u>𝐅𝐨𝐫𝐰𝐚𝐫𝐝 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 👀</u> \n\n"
         if msg.forward_from["is_bot"]:
