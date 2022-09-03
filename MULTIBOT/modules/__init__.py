@@ -6,6 +6,7 @@ from os.path import basename, dirname, isfile
 from MULTIBOT import MOD_LOAD, MOD_NOLOAD
 
 
+
 def __list_all_modules():
     # This generates a list of modules in this
     # folder for the * in __main__ to work.
