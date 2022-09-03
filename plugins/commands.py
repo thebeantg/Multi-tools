@@ -61,7 +61,7 @@ async def id_message(bot, message):
 ○ UserName : @{message.from_user.username}
 ○ link : <code>https://t.me/{message.from_user.username}</code>
 
-Thank You For Using Me❣️</i>""")
+Thank You For Using Me❣️</i>""",
     reply_markup=InlineKeyboardMarkup( [[
         InlineKeyboardButton("✨️ Support", url="https://t.me/BETA_SUPPORT"),
         InlineKeyboardButton("📣 Updates", url="https://t.me/Beta_BoTZ")
