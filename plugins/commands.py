@@ -109,8 +109,8 @@ async def logosq(bot, message):
 @Client.on_message(filters.command("logo") & filters.incoming & filters.text & ~filters.forwarded & filters.private)
 async def logo(bot, message):
   FSub = await ForceSub(bot, message)
-    if FSub == 400:
-        return 
+  if FSub == 400:
+      return 
   try:
     text = message.text.replace("logo","").replace("/","").replace("@TechZLogoMakerBot","").strip().upper()
     
