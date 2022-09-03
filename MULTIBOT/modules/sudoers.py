@@ -8,7 +8,7 @@ import psutil
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 
-from multibot import (
+from MULTIBOT import (
     BOT_ID,
     GBAN_LOG_GROUP_ID,
     SUDOERS,
@@ -27,21 +27,9 @@ from plugins.utils.functions import extract_user, extract_user_and_reason, resta
 
 __MODULE__ = "Sudoers"
 __HELP__ = """
-/stats - To Check System Status.
-
-/gstats - To Check Bot's Global Stats.
-
-/gban - To Ban A User Globally.
-
-/clean_db - Clean database.
-
 /broadcast - To Broadcast A Message To All Groups.
 
-/update - To Update And Restart The Bot
-
-/eval - Execute Python Code
-
-/sh - Execute Shell Code
+/dyno - to check heroku dyno
 """
 
 
