@@ -1,6 +1,6 @@
 from pyrogram import filters
 
-from multibot import Client
+from MULTIBOT import Client
 from helper.errors import capture_err
 from plugins.utils.http import get
 
