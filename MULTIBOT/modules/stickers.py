@@ -1,5 +1,5 @@
 import imghdr
-from MULTIBOT import Client
+from MULTIBOT import Client, BOT_USERNAME
 import os
 from asyncio import gather
 from traceback import format_exc
@@ -80,7 +80,7 @@ async def kang(client, message: Message):
     FSub = await ForceSub(client, message)
     if FSub == 400:
         return 
-    BOT_USERNAME = client.username
+    BOT_USERNAME = {BOT_USERNAME}
     if not message.reply_to_message:
         return await message.reply_text("Reply to a sticker/image to kang it.")
     if not message.from_user:
