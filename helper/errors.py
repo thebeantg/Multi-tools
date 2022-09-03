@@ -50,7 +50,7 @@ def capture_err(func):
                 ),
             )
             for x in error_feedback:
-                await app.send_message(LOG_GROUP_ID, x)
+                await client.send_message(LOG_GROUP_ID, x)
             raise err
 
     return capture
