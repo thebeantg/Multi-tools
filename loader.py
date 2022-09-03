@@ -1,10 +1,5 @@
 from pyrogram import Client
 from variables import *
-import logging
-
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-logging.getLogger("pyrogram").setLevel(logging.ERROR)                
 
 class App(Client):
 
@@ -24,12 +19,7 @@ class App(Client):
        self.name = me.first_name
        self.mention = me.mention
        self.username = me.username
-       logging.info(f"{me.first_name} 𝘪𝘴 𝘴𝘵𝘢𝘳𝘵𝘦𝘥 ... ⚡️")                           
-
-    async def stop(self, *args):
-       await super().stop()
-       logging.info("Bot Stopped")
-
+       
   
 bot = App()
 bot.run()
