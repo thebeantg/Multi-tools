@@ -7,7 +7,7 @@ from pyrogram.types import Message
 
 from helper.errors import capture_err
 from helper.keyboard import ikb
-from plugins.utils.pastebin import paste
+from plugins.utils.pastebin import paste, eor
  
 pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
 
