@@ -17,7 +17,7 @@ async def ForceSub(bot: Client, event: Message):
         return 200
     try:
         user = await bot.get_chat_member(chat_id=(int(FORCE_SUB) if Config.UPDATES_CHANNEL.startswith("-100") else Config.UPDATES_CHANNEL), user_id=event.from_user.id)
-        if user.status == "kicked":
+        if user.status == "banned":
             await bot.send_message(
                 chat_id=event.from_user.id,
                 text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/BETA_SUPPORT).",
