@@ -18,7 +18,7 @@ async def is_not_subscribed(client, message):
            )
        )
 
-@Client.on_message(filters.media & filters.private)
+@Client.on_message(filters.photo & filters.video & filters.document & filters.private)
 async def telegraph_upload(bot, update):
     kikked = await BanChek(bot, update)
     if kikked == 400:
