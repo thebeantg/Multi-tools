@@ -4,7 +4,7 @@ import re
 import aiofiles
 from pyrogram import filters, Client
 from pyrogram.types import Message
-from multibot import Client
+from MULTIBOT import Client
 
 from helper.errors import capture_err
 from helper.keyboard import ikb
