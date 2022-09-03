@@ -16,7 +16,7 @@ async def ForceSub(bot: Client, event: Message):
         print(f"Unable to do Force Subscribe to {FORCE_SUB}\n\nError: {err}\n\nContact Support Group: https://t.me/BETA_SUPPORT")
         return 200
     try:
-        user = await bot.get_chat_member(chat_id=(int(FORCE_SUB) if Config.UPDATES_CHANNEL.startswith("-100") else Config.UPDATES_CHANNEL), user_id=event.from_user.id)
+        user = await bot.get_chat_member(chat_id=(int(FORCE_SUB) if FORCE_SUB.startswith("-100") else FORCE_SUB), user_id=event.from_user.id)
         if user.status == "banned":
             await bot.send_message(
                 chat_id=event.from_user.id,
