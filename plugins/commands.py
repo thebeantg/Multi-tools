@@ -5,7 +5,7 @@ from helper.fsub import ForceSub
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from helper.add_new import add_user
 from variables import STAT_STICK, PICS, ADMIN, DELAY, B_TEXT
-from plugins.logo_maker import generate_logo
+from plugins.utils.logo_maker import generate_logo
 import asyncio
 import random
 import time
