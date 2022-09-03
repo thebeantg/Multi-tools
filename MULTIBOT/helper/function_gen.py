@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQ
 from pyrogram import filters
 from MULTIBOT import Client
 
-from image.edit_1 import (  # pylint:disable=import-error
+from MULTIBOT.helper.edit_1 import (  # pylint:disable=import-error
     bright,
     mix,
     black_white,
@@ -14,7 +14,7 @@ from image.edit_1 import (  # pylint:disable=import-error
     normal_blur,
     box_blur,
 )
-from image.edit_2 import (  # pylint:disable=import-error
+from MULTIBOT.helper.edit_2 import (  # pylint:disable=import-error
     circle_with_bg,
     circle_without_bg,
     sticker,
@@ -24,13 +24,13 @@ from image.edit_2 import (  # pylint:disable=import-error
     pencil,
     cartoon,
 )
-from image.edit_3 import (  # pylint:disable=import-error
+from MULTIBOT.helper.edit_3 import (  # pylint:disable=import-error
     green_border,
     blue_border,
     black_border,
     red_border,
 )
-from image.edit_4 import (  # pylint:disable=import-error
+from MULTIBOT.helper.edit_4 import (  # pylint:disable=import-error
     rotate_90,
     rotate_180,
     rotate_270,
@@ -40,7 +40,7 @@ from image.edit_4 import (  # pylint:disable=import-error
     removebg_plain,
     removebg_sticker,
 )
-from image.edit_5 import (  # pylint:disable=import-error
+from MULTIBOT.helper.edit_5 import (  # pylint:disable=import-error
     normalglitch_1,
     normalglitch_2,
     normalglitch_3,
