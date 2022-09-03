@@ -1,5 +1,5 @@
 import imghdr
-from MULTIBOT import Client, BOT_USERNAME
+from MULTIBOT import *
 import os
 from asyncio import gather
 from traceback import format_exc
@@ -15,15 +15,6 @@ from pyrogram.errors import (
 )
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-
-
-x = Client.get_me()
-
-BOT_ID = x.id
-BOT_NAME = x.first_name + (x.last_name or "")
-BOT_USERNAME = x.username
-BOT_MENTION = x.mention
-BOT_DC_ID = x.dc_id
 
 
 from helper.errors import capture_err
