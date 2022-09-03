@@ -80,7 +80,7 @@ def paginate_modules(page_n, module_dict, prefix, chat=None):
                                                                modulo_page),
                         ),
                         EqInlineKeyboardButton(
-                            "❯",
+                            "➣",
                             callback_data="{}_next({})".format(prefix,
                                                                modulo_page),
                         ),
