@@ -10,8 +10,6 @@ API_ID = int(os.environ.get("API_ID", ""))
 
 API_HASH = os.environ.get("API_HASH", "")
 
-STAT_STICK = os.environ.get("STAT_STICK", "CAACAgUAAxkBAAIMMmJ_Y17NRUpBJgLhsqUTTRNilYxAAAKeBAACf7TwVxZUQiDRe7p1HgQ")
-
 PICS = os.environ.get("PICS", "https://telegra.ph/file/34fd203eb89fd747ffb57.jpg").split()
 
 ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '900873119').split()]
@@ -19,8 +17,6 @@ ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.
 DB_URL = os.environ.get("DB_URL", "")
 
 DB_NAME = os.environ.get("DB_NAME", "")
-
-DELAY = int(os.environ.get("DELAY", "1"))
 
 FORCE_SUB = os.environ.get("FORCE_SUB", None)           
 
