@@ -67,7 +67,7 @@ Thank You For Using Me❣️</i>""")
         InlineKeyboardButton("📣 Updates", url="https://t.me/Beta_BoTZ")
         ]]
         )
-    )
+     )
 
 @Client.on_message(filters.command(["stickerid"]))
 async def stickerid(bot, message): 
