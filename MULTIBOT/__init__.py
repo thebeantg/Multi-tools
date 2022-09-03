@@ -79,7 +79,6 @@ BOT_DC_ID = x.dc_id
 
 
 
-
 telegraph = Telegraph()
 telegraph.create_account(short_name=BOT_USERNAME)
 
