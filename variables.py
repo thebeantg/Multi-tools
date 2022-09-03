@@ -18,6 +18,8 @@ DB_URL = os.environ.get("DB_URL", "")
 
 DB_NAME = os.environ.get("DB_NAME", "")
 
+RemoveBG_API = os.environ.get("RemoveBG_API", "")
+
 FORCE_SUB = os.environ.get("FORCE_SUB", None)           
 
 HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")
