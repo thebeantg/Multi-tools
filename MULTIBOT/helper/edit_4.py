@@ -270,7 +270,7 @@ async def removebg_plain(client, message):
                 pass
         else:
             await message.reply_to_message.reply_text(
-                "Get the api from https://www.remove.bg/b/background-removal-api and add in Config Var",
+                "Remove Bg Api Not Probided In Config Var",
                 quote=True,
                 disable_web_page_preview=True,
             )
