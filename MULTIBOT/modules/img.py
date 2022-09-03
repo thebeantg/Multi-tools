@@ -1,4 +1,4 @@
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from pyrogram import filters
 from MULTIBOT import Client
 
