@@ -8,7 +8,6 @@ python-dotenv
 requests
 Heroku3
 motor
-aiofiles
 Pillow
 humanize
 psutil
