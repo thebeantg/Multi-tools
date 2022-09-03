@@ -4,6 +4,12 @@ from os import environ
 
 id_pattern = re.compile(r'^.\d+$')
 
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+
+API_ID = int(os.environ.get("API_ID", ""))
+
+API_HASH = os.environ.get("API_HASH", "")
+
 STAT_STICK = os.environ.get("STAT_STICK", "CAACAgUAAxkBAAIMMmJ_Y17NRUpBJgLhsqUTTRNilYxAAAKeBAACf7TwVxZUQiDRe7p1HgQ")
 
 PICS = os.environ.get("PICS", "https://telegra.ph/file/34fd203eb89fd747ffb57.jpg").split()
@@ -32,18 +38,6 @@ LOG_TEXT = """<i><u>👁️‍🗨️USER DETAILS</u>
 ○ UserName : @{username}
 
 By = {bot}</i>"""
-
-#  ❓️❓️ BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
-
-
-
-B_TEXT = """🍁 ʙʀᴏᴀᴅᴄᴀꜱᴛ ꜱᴛᴀʀᴛᴇᴅ 🍁 
-╭━━━━━━━━━━━━━━━━━➣
-┣⪼📯 ᴛᴏᴛᴀʟ - <code>{tot}</code>
-┣⪼✅️ ᴅᴏɴᴇ - <code>{success}</code>
-┣⪼❌️ ꜰᴀɪʟᴇᴅ - <code>{failed}</code>
-╰━━━━━━━━━━━━━━━━━➣ """
-
 
 
 
