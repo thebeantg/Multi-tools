@@ -10,7 +10,7 @@ __MODULE__ = "Telegraph"
 __HELP__ = """
 Send me any image or video under 5mb"""
 
-@Client.on_message(filters.media & filters.private)
+@Client.on_message(filters.command("telegraph") & filters.private)
 async def telegraph_upload(bot, update):
     FSub = await ForceSub(bot, update)
     if FSub == 400:
@@ -19,7 +19,7 @@ async def telegraph_upload(bot, update):
         text="<code>Downloading to My Server ...</code>",
         disable_web_page_preview=True
     )
-    media = await update.download()
+    media = await update.reply_to_message.download()
     
     await text.edit_text(
         text="<code>Downloading Completed. Now I am Uploading to telegra.ph Link ...</code>",
