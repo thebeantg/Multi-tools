@@ -8,7 +8,8 @@ from MULTIBOT import Client
 
 __MODULE__ = "Telegraph"
 __HELP__ = """
-Send me any image or video under 5mb"""
+Send me any image or video and reply it by
+/telegraph command"""
 
 @Client.on_message(filters.command("telegraph") & filters.private)
 async def telegraph_upload(bot, update):
