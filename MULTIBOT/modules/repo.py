@@ -8,7 +8,7 @@ __MODULE__ = "Repo"
 __HELP__ = "/repo - To Get My Github Repository Link " "And Updates Channel Link"
 
 
-@Client.on_message(filters.command("repo"))
+@Client.on_message(filters.command("repo", "source"))
 async def repo(client, message):
     users = await get("https://api.github.com/repos/jeolpaul/TG-MULTI-BOT/contributors")
     list_of_users = ""
