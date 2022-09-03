@@ -44,7 +44,7 @@ __HELP__ = """
 """
 
 
-@Client.on_message(filters.command("get_sticker"))
+@Client.on_message(filters.command("get_sticker") & ~filters.edited)
 @capture_err
 async def sticker_image(_, message: Message):
     FSub = await ForceSub(_, message)
@@ -74,7 +74,7 @@ async def sticker_image(_, message: Message):
 
 
 
-@Client.on_message(filters.command("kang"))
+@Client.on_message(filters.command("kang") & ~filters.edited)
 @capture_err
 async def kang(client, message: Message):
     FSub = await ForceSub(client, message)
@@ -163,7 +163,7 @@ async def kang(client, message: Message):
                 stickerset = await create_sticker_set(
                     client,
                     message.from_user.id,
-                    f"{message.from_user.first_name[:32]}'s pack by @BETA_BOTZ",
+                    f"{message.from_user.first_name[:32]}'s | @BETA_BOTZ Pack",
                     packname,
                     [sticker],
                 )
