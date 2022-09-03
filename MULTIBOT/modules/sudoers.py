@@ -12,7 +12,7 @@ from MULTIBOT import (
     BOT_ID,
     GBAN_LOG_GROUP_ID,
     SUDOERS,
-    Client as app,
+    Client,
     bot_start_time,
 )
 from helper.errors import capture_err
@@ -54,109 +54,100 @@ DISK: {disk}%
     return stats
 
 
-# Gban
+# dyno
 
 
-@app.on_message(filters.command("gban") & SUDOERS & ~filters.edited)
-@capture_err
-async def ban_globally(_, message):
-    user_id, reason = await extract_user_and_reason(message)
-    user = await app.get_users(user_id)
-    from_user = message.from_user
 
-    if not user_id:
-        return await message.reply_text("I can't find that user.")
-    if not reason:
-        return await message.reply("No reason provided.")
+import os
+import math
+import time
+import heroku3
+import requests
+from variables import ADMIN, HEROKU_API_KEY
+from pyrogram import filters
 
-    if user_id in [from_user.id, BOT_ID] or user_id in SUDOERS:
-        return await message.reply_text("I can't ban that user.")
+CMD = ['.', '/']
+BOT_START_TIME = time.time()
 
-    served_chats = await get_served_chats()
-    m = await message.reply_text(
-        f"**Banning {user.mention} Globally!**"
-        + f" **This Action Should Take About {len(served_chats)} Seconds.**"
-    )
-    await add_gban_user(user_id)
-    number_of_chats = 0
-    for served_chat in served_chats:
+@Client.on_message(filters.private & filters.user(ADMIN) & filters.command("dyno", CMD))         
+async def bot_status(client,message):
+    if HEROKU_API_KEY:
         try:
-            await app.ban_chat_member(served_chat["chat_id"], user.id)
-            number_of_chats += 1
-            await asyncio.sleep(1)
-        except FloodWait as e:
-            await asyncio.sleep(int(e.x))
-        except Exception:
-            pass
-    try:
-        await app.send_message(
-            user.id,
-            f"Hello, You have been globally banned by {from_user.mention},"
-            + " You can appeal for this ban by talking to him.",
-        )
-    except Exception:
-        pass
-    await m.edit(f"Banned {user.mention} Globally!")
-    ban_text = f"""
-__**New Global Ban**__
-**Origin:** {message.chat.title} [`{message.chat.id}`]
-**Admin:** {from_user.mention}
-**Banned User:** {user.mention}
-**Banned User ID:** `{user_id}`
-**Reason:** __{reason}__
-**Chats:** `{number_of_chats}`"""
-    try:
-        m2 = await app.send_message(
-            GBAN_LOG_GROUP_ID,
-            text=ban_text,
-            disable_web_page_preview=True,
-        )
-        await m.edit(
-            f"Banned {user.mention} Globally!\nAction Log: {m2.link}",
-            disable_web_page_preview=True,
-        )
-    except Exception:
-        await message.reply_text(
-            "User Gbanned, But This Gban Action Wasn't Logged, Add Me Bot In GBAN_LOG_GROUP"
-        )
+            server = heroku3.from_key(HEROKU_API_KEY)
 
+            user_agent = (
+                'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
+                'AppleWebKit/537.36 (KHTML, like Gecko) '
+                'Chrome/80.0.3987.149 Mobile Safari/537.36'
+            )
+            accountid = server.account().id
+            headers = {
+            'User-Agent': user_agent,
+            'Authorization': f'Bearer {HEROKU_API_KEY}',
+            'Accept': 'application/vnd.heroku+json; version=3.account-quotas',
+            }
 
-# Ungban
+            path = "/accounts/" + accountid + "/actions/get-quota"
 
+            request = requests.get("https://api.heroku.com" + path, headers=headers)
 
-@app.on_message(filters.command("ungban") & SUDOERS & ~filters.edited)
-@capture_err
-async def unban_globally(_, message):
-    user_id = await extract_user(message)
-    if not user_id:
-        return await message.reply_text("I can't find that user.")
-    user = await app.get_users(user_id)
+            if request.status_code == 200:
+                result = request.json()
 
-    is_gbanned = await is_gbanned_user(user.id)
-    if not is_gbanned:
-        await message.reply_text("I don't remember Gbanning him.")
+                total_quota = result['account_quota']
+                quota_used = result['quota_used']
+
+                quota_left = total_quota - quota_used
+                
+                total = math.floor(total_quota/3600)
+                used = math.floor(quota_used/3600)
+                hours = math.floor(quota_left/3600)
+                minutes = math.floor(quota_left/60 % 60)
+                days = math.floor(hours/24)
+
+                usedperc = math.floor(quota_used / total_quota * 100)
+                leftperc = math.floor(quota_left / total_quota * 100)
+
+                quota_details = f"""
+💫SERVER STATUS💫
+💠 ToTal dyno ➪ {total}hr 𝖿𝗋𝖾𝖾 𝖽𝗒𝗇𝗈!
+ 
+💠 Dyno used ➪ {used} 𝖧𝗈𝗎𝗋𝗌 ( {usedperc}% )
+        
+💠 Dyno remaining ➪ {hours} 𝖧𝗈𝗎𝗋𝗌 ( {leftperc}% )
+        
+💠 Approximate days ➪ {days} days left!"""
+
+            else:
+                quota_details = ""
+        except:
+            print("Check your Heroku API key")
+            quota_details = ""
     else:
-        await remove_gban_user(user.id)
-        await message.reply_text(f"Lifted {user.mention}'s Global Ban.'")
+        quota_details = ""
 
+    uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - BOT_START_TIME))
 
-# Broadcast
-
-
-
-# Update
-
-
-@app.on_message(filters.command("update") & SUDOERS & ~filters.edited)
-async def update_restart(_, message):
     try:
-        out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
-        if "Already up to date." in str(out):
-            return await message.reply_text("Its already up-to date!")
-        await message.reply_text(f"```{out}```")
-    except Exception as e:
-        return await message.reply_text(str(e))
-    m = await message.reply_text(
-        "**Updated with default branch, restarting now.**"
+        t, u, f = shutil.disk_usage(".")
+        total = humanbytes(t)
+        used = humanbytes(u)
+        free = humanbytes(f)
+
+        disk = "\n**Disk Details**\n\n" \
+            f"> USED  :  {used} / {total}\n" \
+            f"> FREE  :  {free}\n\n"
+    except:
+        disk = ""
+
+    await message.reply_text(
+        "𝗖𝘂𝗿𝗿𝗲𝗻𝘁 𝘀𝘁𝗮𝘁𝘂𝘀 𝗼𝗳 𝘆𝗼𝘂𝗿 𝗕𝗼𝘁\n\n"
+        "DB Status\n"
+        f"➪ 𝖡𝗈𝗍 𝖴𝗉𝗍𝗂𝗆𝖾: {uptime}\n"
+        f"{quota_details}"
+        f"{disk}",
+        quote=True,
+        parse_mode="md"
     )
-    await restart(m)
+
+
