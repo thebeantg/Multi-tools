@@ -3,25 +3,12 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from telegraph import upload_file
-from helper.utils import not_subscribed
-from helper.ban import BanChek
-
-@Client.on_message(filters.private & filters.create(not_subscribed))
-async def is_not_subscribed(client, message):
-    await message.reply_text(
-       text="**⚠️Sorry bro,You didn't Joined Our Updates Channel Join now and start again🙏**",
-       reply_markup=InlineKeyboardMarkup( [[
-           InlineKeyboardButton(text="📢𝙹𝚘𝚒𝚗 𝙼𝚢 𝚄𝚙𝚍𝚊𝚝𝚎 𝙲𝚑𝚊𝚗𝚗𝚎𝚕📢", url=client.invitelink)
-           ],[
-           InlineKeyboardButton("🔄 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗 🔄", url=f"https://t.me/{client.username}?start=start")            
-           ]]
-           )
-       )
+from helper.fsub import ForceSub 
 
 @Client.on_message(filters.media & filters.private)
 async def telegraph_upload(bot, update):
-    kikked = await BanChek(bot, update)
-    if kikked == 400:
+    FSub = await ForceSub(bot, update)
+    if FSub == 400:
         return 
     text = await update.reply_text(
         text="<code>Downloading to My Server ...</code>",
