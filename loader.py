@@ -26,7 +26,11 @@ class App(Client):
        self.username = me.username
        logging.info(f"{me.first_name} 𝘪𝘴 𝘴𝘵𝘢𝘳𝘵𝘦𝘥 ... ⚡️")                           
 
-      
+    async def stop(self, *args):
+       await super().stop()
+       logging.info("Bot Stopped")
+
+  
 bot = App()
 bot.run()
 
