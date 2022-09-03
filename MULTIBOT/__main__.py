@@ -8,15 +8,15 @@ from uvloop import install
 from pyrogram import filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from multibot import (
+from MULTIBOT import (
     BOT_NAME,
     BOT_USERNAME,
     LOG_GROUP_ID,
     aiohttpsession,
     Client as app
 )
-from multibot.modules import ALL_MODULES
-from multibot.modules.sudoers import bot_sys_stats
+from MULTIBOT.modules import ALL_MODULES
+from MULTIBOT.modules.sudoers import bot_sys_stats
 from plugins.utils import paginate_modules
 from plugins.utils.constants import MARKDOWN
 from plugins.utils.dbfunctions import clean_restart_stage
@@ -30,7 +30,7 @@ async def start_bot():
     global HELPABLE
 
     for module in ALL_MODULES:
-        imported_module = importlib.import_module("multibot.modules." + module)
+        imported_module = importlib.import_module("MULTIBOT.modules." + module)
         if (
                 hasattr(imported_module, "__MODULE__")
                 and imported_module.__MODULE__
@@ -228,8 +228,8 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name}, My name is {bot_name}.
-I'm a group management bot with some useful features.
+        """Hello {message.from_user.first_name}, My name is {bot_name}.
+I'm a Multi bot with some useful features.
 You can choose an option below, by clicking a button.
 Also you can ask anything in Support Group.
 """.format(
