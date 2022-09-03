@@ -79,10 +79,10 @@ To Make Square Logo -  /logosq Your Name
              )
    elif data == "devs":
          await msg.message.edit(
-             text=f"This Bot will be made @JP_Jeol & @mr_MKN ",
+             text=f"These Are My Developers",
              reply_markup=InlineKeyboardMarkup( [[
-                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 1", url="https://t.me/TG_BI_CH"),
-                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 2", url="https://t.me/mr_MKN")
+                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 1", user_id=5172114510),
+                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 2", user_id=900873119)
                   ],[
                   InlineKeyboardButton("❣️ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐂𝐎𝐃𝐄 ❣️", url="https://github.com/Jeolpaul/TG-MULTI-BOT"),
                   ],[
@@ -93,7 +93,7 @@ To Make Square Logo -  /logosq Your Name
              )
    elif data == "fun":
          await msg.message.edit(
-             text=f"""<b><u>JUS TEST THIS COMMANDS 😉</u></b>
+             text=f"""<b><u>JUST TEST THIS COMMANDS 😉</u></b>
 
 ◉ /runs         
 ◉ /ikka      
@@ -115,11 +115,7 @@ To Make Square Logo -  /logosq Your Name
          await msg.message.edit(
              text="🤖 This is My botz 😁",
                  reply_markup=InlineKeyboardMarkup( [[
-                     InlineKeyboardButton("ℹ️ 𝐌𝐎𝐕𝐈𝐄 𝐁𝐎𝐓", url="https://t.me/AUTO_FILTERBETABOT"),
-                     InlineKeyboardButton("🎵 𝐌𝐔𝐒𝐈𝐂 𝐁𝐎𝐓", url="https://t.me/MUSICPLAYER_BETABOT")
-                     ],[
-                     InlineKeyboardButton("🎖️ 𝐆𝐑𝐎𝐔𝐏 𝐌𝐀𝐍𝐀𝐆𝐄𝐑 🎖️", url="https://t.me/MKN_GROUPMANAGEROBOT")
-                     ],[                   
+                     InlineKeyboardButton("ℹ️ OUR OTHER BOTZ", url="https://t.me/BETA_BOTZ/86"),   
                      InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
