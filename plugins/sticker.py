@@ -2,6 +2,7 @@ import imghdr
 import os
 from asyncio import gather
 from traceback import format_exc
+from helper.fsub import ForceSub 
 
 from pyrogram import filters, Client 
 from pyrogram.errors import (
@@ -42,6 +43,9 @@ SUPPORTED_TYPES = ["jpeg", "png", "webp"]
 @Client.on_message(filters.command("get_sticker") & ~filters.edited)
 @capture_err
 async def sticker_image(_, message: Message):
+    FSub = await ForceSub(_, message)
+    if FSub == 400:
+        return 
     r = message.reply_to_message
 
     if not r:
@@ -69,6 +73,9 @@ async def sticker_image(_, message: Message):
 @Client.on_message(filters.command("kang") & ~filters.edited)
 @capture_err
 async def kang(client, message: Message):
+    FSub = await ForceSub(client, message)
+    if FSub == 400:
+        return 
     BOT_USERNAME = client.username
     if not message.reply_to_message:
         return await message.reply_text("Reply to a sticker/image to kang it.")
