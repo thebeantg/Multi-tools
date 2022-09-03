@@ -5,7 +5,7 @@ import shutil
 import cv2
 import io
 import os
-from info import RemoveBG_API 
+from variables import RemoveBG_API 
 
 
 async def rotate_90(client, message):
