@@ -17,6 +17,15 @@ from pyrogram.errors import (
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
+x = Client.get_me()
+
+BOT_ID = x.id
+BOT_NAME = x.first_name + (x.last_name or "")
+BOT_USERNAME = x.username
+BOT_MENTION = x.mention
+BOT_DC_ID = x.dc_id
+
+
 from helper.errors import capture_err
 from plugins.utils.files import (
     get_document_from_file_id,
@@ -80,7 +89,7 @@ async def kang(client, message: Message):
     FSub = await ForceSub(client, message)
     if FSub == 400:
         return 
-    BOT_USERNAME = BOT_USERNAME
+    BOT_USERNAME = x.username
     if not message.reply_to_message:
         return await message.reply_text("Reply to a sticker/image to kang it.")
     if not message.from_user:
