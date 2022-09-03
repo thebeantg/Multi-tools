@@ -162,7 +162,7 @@ async def logo_doc(_,query):
 
 
 @Client.on_message(filters.command("repo"))
-async def repo(_, message):
+async def repo(client, message):
     users = await get("https://api.github.com/repos/jeolpaul/TG-MULTI-BOT/contributors")
     list_of_users = ""
     count = 1
