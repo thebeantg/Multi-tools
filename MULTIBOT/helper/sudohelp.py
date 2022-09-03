@@ -1,3 +1,53 @@
+import asyncio
+import os
+import subprocess
+import time
+import os
+import math
+import time
+import heroku3
+import requests
+from variables import ADMIN, HEROKU_API_KEY
+from pyrogram import filters
+
+CMD = ['.', '/']
+
+BOT_START_TIME = time.time()
+
+import psutil
+from pyrogram import filters
+from pyrogram.errors import FloodWait
+
+from MULTIBOT import (
+    BOT_ID,
+    GBAN_LOG_GROUP_ID,
+    SUDOERS,
+    bot_start_time,
+)
+from helper.errors import capture_err
+from plugins.utils import formatter
+from MULTIBOT import Client
+from plugins.utils.dbfunctions import (
+    add_gban_user,
+    get_served_chats,
+    is_gbanned_user,
+    remove_gban_user,
+)
+from plugins.utils.functions import extract_user, extract_user_and_reason, restart
+import time
+import asyncio 
+import logging 
+import datetime
+from variables import ADMIN
+from helper.database import db
+from pyrogram.types import Message
+from pyrogram import filters
+from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command("dyno", CMD))         
 async def bot_status(client,message):
     if HEROKU_API_KEY:
