@@ -67,17 +67,14 @@ To Make Square Logo -  /logosq Your Name
          await msg.message.edit(
              text=f"Hello {msg.from_user.mention}👋🏻\nI'am A Multi use Bot with many usefull features.\neg:- Telegarph, Channel ID, User ID, Fun, Group Id etc...\nYou can see My commands by below button... \n\n◉ send channel last message with forwerd tag to get the channel id 💯",          
              reply_markup=InlineKeyboardMarkup( [[
-                  InlineKeyboardButton("❣️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url="https://t.me/BETA_BOTSUPPORT"),
-                  InlineKeyboardButton("📢 𝐔𝐏𝐃𝐀𝐓𝐄𝐒", url="https://t.me/Beta_Bot_Updates")
-                  ],[            
-                  InlineKeyboardButton("ℹ️ 𝐇𝐄𝐋𝐏", callback_data="help"),
-                  InlineKeyboardButton("😉 𝐅𝐔𝐍", callback_data="fun")
-                  ],[
-                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 👨‍💻 ", callback_data="devs"),
-                  InlineKeyboardButton("🤖 𝐀𝐁𝐎𝐔𝐓", callback_data="about")
+                 InlineKeyboardButton("✨️ Support", url="https://t.me/BETA_SUPPORT"),
+                 InlineKeyboardButton("📢 Updates", url="https://t.me/Beta_BoTZ")
+                 ],[            
+                 InlineKeyboardButton("ℹ️ Help", callback_data="help"),
+                 InlineKeyboardButton("🤖 𝐀𝐁𝐎𝐔𝐓", callback_data="about")
                   ]]
                   )
-             )
+         )
    elif data == "devs":
          await msg.message.edit(
              text=f"These Are My Developers",
