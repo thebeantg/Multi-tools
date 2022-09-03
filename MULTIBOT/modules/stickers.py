@@ -1,5 +1,5 @@
 import imghdr
-from multibot import Client
+from MULTIBOT import Client
 import os
 from asyncio import gather
 from traceback import format_exc
