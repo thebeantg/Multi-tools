@@ -3,7 +3,7 @@ from pyrogram import Client
 from pyrogram.file_id import FileId
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from helper.fsub import ForceSub
-from multibot import Client 
+from MULTIBOT import Client 
 
 __MODULE__ = "Channel Id"
 __HELP__ = """
