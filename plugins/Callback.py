@@ -33,7 +33,7 @@ To Make Square Logo -  /logosq Your Name
 🤩THANKS FOR USING ME😍
 """,       
            reply_markup=InlineKeyboardMarkup( [[
-                  InlineKeyboardButton("🤖 𝐌𝐘 𝐁𝐎𝐓𝐒", callback_data="botz")
+                  InlineKeyboardButton("🤖 𝐌𝐘 𝐁𝐎𝐓𝐒", url="https://t.me/BETA_BOTZ/86")
                   ],[
                   InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
                   InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
@@ -46,7 +46,7 @@ To Make Square Logo -  /logosq Your Name
 ╔════❰ 𝙼𝚄𝙻𝚃𝙸 𝙱𝙾𝚃 ❱═❍
 ║╭━━━━━━━━━━━━━━━➣
 ║┣⪼🤖ᴍʏ ɴᴀᴍᴇ : {bot.mention}
-║┣⪼👦ᴅᴇᴠ 1 : <a href=https://t.me/TG_BI_CH>ᴊᴇᴏʟ</a>
+║┣⪼👦ᴅᴇᴠ 1 : <a href=https://t.me/about_jeol>ᴊᴇᴏʟ</a>
 ║┣⪼👨‍💻ᴅᴇᴠ 2 : <a href=https://t.me/mr_MKN>ᴍʀ.ᴍᴋɴ ᴛɢ</a>
 ║┣⪼❣️sᴏᴜʀᴄᴇ ᴄᴏᴅ : <a href=https://github.com/Jeolpaul/TG-MULTI-BOT>ᴛɢ-ᴍᴜʟᴛɪ-ʙᴏᴛ</a>
 ║┣⪼📡ʜᴏsᴛᴇᴅ ᴏɴ : <a href=https://dashboard.heroku.com>ʜᴇʀᴏᴋᴜ</a>
