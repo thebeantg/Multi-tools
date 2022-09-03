@@ -4,7 +4,7 @@ import os
 from asyncio import gather
 from traceback import format_exc
 from helper.fsub import ForceSub 
-from pyrogram import filters, Client 
+from pyrogram import filters
 from pyrogram.errors import (
     PeerIdInvalid,
     ShortnameOccupyFailed,
