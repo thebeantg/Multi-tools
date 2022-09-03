@@ -13,3 +13,4 @@ humanize
 psutil
 pykeyboard
 speedtest-cli
+aiofiles
