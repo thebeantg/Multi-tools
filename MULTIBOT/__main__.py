@@ -107,9 +107,9 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-        f"Hey there! My name is {BOT_NAME}. I'm a **Multi Bot**"
-        + " with lots of useful features, feel free to"
-        + "use me and support."
+        f"Hey there! My name is **{BOT_NAME}**. I'm advaned bot"
+        + " with lots of useful features, feel free to "
+        + "use me."
 )
 
 keyboard = InlineKeyboardMarkup(
