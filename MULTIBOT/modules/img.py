@@ -1,6 +1,7 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from pyrogram import filters
 from MULTIBOT import Client
+from MULTIBOT.helper.function_gen import *
 
 __MODULE__ = "Editor"
 __HELP__ = """
