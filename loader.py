@@ -1,7 +1,4 @@
-import os
-import re
-from pyrogram import Client, __version__
-from pyrogram.raw.all import layer
+from pyrogram import Client
 from variables import *
 
 class App(Client):
