@@ -323,9 +323,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 
 
-@Client.on_message(filters.private & filter.rex("Hai"))
-async def mr(c, m):
-    await m.reply_text("😅😅")
 
 
 
