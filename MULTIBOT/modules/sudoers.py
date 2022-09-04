@@ -86,19 +86,3 @@ async def broadcast_message(_, message):
     await m.edit(f"**Broadcasted Message In {sent} Chats.**")
 
 
-# Update
-
-
-@app.on_message(filters.command("update") & SUDOERS & ~filters.edited)
-async def update_restart(_, message):
-    try:
-        out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
-        if "Already up to date." in str(out):
-            return await message.reply_text("Its already up-to date!")
-        await message.reply_text(f"```{out}```")
-    except Exception as e:
-        return await message.reply_text(str(e))
-    m = await message.reply_text(
-        "**Updated with default branch, restarting now.**"
-    )
-    await restart(m)
