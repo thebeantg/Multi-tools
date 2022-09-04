@@ -98,25 +98,65 @@ async def callback(bot, msg):
                  ]]
                  )
              )
-   elif data == "botz":
+   elif data == "tgraph":
          await msg.message.edit(
-             text="🤖 This is My botz 😁",
-                 reply_markup=InlineKeyboardMarkup( [[
-                     InlineKeyboardButton("ℹ️ OUR OTHER BOTZ", url="https://t.me/BETA_BOTZ/86"),   
+             text="""▫️HELP: Telegraph▪️
+
+Do as you wish with graph.org module!
+
+USAGE:
+◉ /telegraph - reply to below 5Mb media to get telegraph link💯""",
+                 reply_markup=InlineKeyboardMarkup( [[  
                      InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
                  )
-   elif data == "close":
-        await msg.message.delete()
-        try:
-            await msg.message.reply_to_message.delete()
-        except:
-            pass
+             )
+   elif data == "tgraph":
+         await msg.message.edit(
+             text="""▫️HELP: Telegraph▪️
 
+Do as you wish with graph.org module!
 
+USAGE:
+◉ /telegraph - reply to below 5Mb media to get telegraph link💯""",
+                 reply_markup=InlineKeyboardMarkup( [[  
+                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                     InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
+                     ]]
+                     )
+                 )
+             )
+   elif data == "tgraph":
+         await msg.message.edit(
+             text="""▫️HELP: Telegraph▪️
 
+Do as you wish with graph.org module!
+
+USAGE:
+◉ /telegraph - reply to below 5Mb media to get telegraph link💯""",
+                 reply_markup=InlineKeyboardMarkup( [[  
+                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                     InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
+                     ]]
+                     )
+                 )
+             )
+   elif data == "tgraph":
+         await msg.message.edit(
+             text="""▫️HELP: Telegraph▪️
+
+Do as you wish with graph.org module!
+
+USAGE:
+◉ /telegraph - reply to below 5Mb media to get telegraph link💯""",
+                 reply_markup=InlineKeyboardMarkup( [[  
+                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                     InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
+                     ]]
+                     )
+                 )
 
 
 
