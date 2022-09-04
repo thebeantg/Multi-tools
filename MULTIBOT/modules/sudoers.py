@@ -10,8 +10,8 @@ from pyrogram.errors import FloodWait
 
 from MULTIBOT import (
     BOT_ID,
-    ADMIN as SUDOERS,
-    Client as app,
+    ADMIN,
+    Client,
     bot_start_time,
 )
 from helper.errors import capture_err
@@ -52,16 +52,11 @@ DISK: {disk}%
     return stats
 
 
-# Gban
-
-
-
-
 
 # Broadcast
 
 
-@app.on_message(filters.command("broadcast") & SUDOERS & ~filters.edited)
+@Client.on_message(filters.command("broadcast") & filters.user(ADMIN))
 @capture_err
 async def broadcast_message(_, message):
     if len(message.command) < 2:
