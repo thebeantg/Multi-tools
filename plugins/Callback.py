@@ -9,34 +9,23 @@ async def callback(bot, msg):
    data = msg.data
    if data == "help":
        await msg.message.edit(       
-           text="""HEY HERE YOU CAN FIND THE BASIC COMMANDS OF MINE.IF YOU DON'T KNOW HOW TO USE COMMAND JOIN SUPPORT GROUP AND ASK.
-
-<b><u>COMMANDS</u></b>
-
-◉ send channel last message with
-  forwerd tag to get the channel id 💯
-
-◉ /id - your tg id & info
-
-◉ /telegraph - reply to below 5Mb media
-  to get telegraph link💯
-
-◉ /stickerid - Reply To Any Sticker to get sticker id
-
-To Make Logo - /logo Your Name
-To Make Square Logo -  /logosq Your Name
-
-♻️ Example:
-/logo BETAs
-/logosq MKN
-
-🤩THANKS FOR USING ME😍
-""",       
+           text="""CLICK THE BELOW BUTTONS TO KNOW MY COMMANDS.""",       
            reply_markup=InlineKeyboardMarkup( [[
-                  InlineKeyboardButton("🤖 𝐌𝐘 𝐁𝐎𝐓𝐒", url="https://t.me/BETA_BOTZ/86"),
-                  InlineKeyboardButton("🔍 SOURCE CODE", url="https://github.com/Jeolpaul/TG-MULTI-BOT")
+                  InlineKeyboardButton("LOGO MAKER", callback_data="logo"),
+                  InlineKeyboardButton("PHOTO EDIT", callback_data="editor")
                   ],[
-                  InlineKeyboardButton("🤘🏻 DEVELOPER", callback_data="devs"),
+                  InlineKeyboardButton("CARBON", callback_data="carbon"),
+                  InlineKeyboardButton("CHANNEL ID", callback_data="chid")
+                  ],[
+                  InlineKeyboardButton("TELEGRAPH", callback_data="tgraph"),
+                  InlineKeyboardButton("FUN GAMES", callback_data="fun")
+                  ],[
+                  InlineKeyboardButton("PASTE CODE", callback_data="paste"),
+                  InlineKeyboardButton("FONT STYLE", callback_data="fun")
+                  ],[
+                  InlineKeyboardButton("❤️‍🩹 ABOUT", callback_data="about"),
+                  InlineKeyboardButton("❤️‍🩹 DEVS", callback_data="devs")
+                  ],[
                   InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start")
                   ]]
                   )
