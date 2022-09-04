@@ -71,7 +71,7 @@ async def broadcast_message(_, message):
     )
     for i in chats:
         try:
-            await app.send_message(i, text=text)
+            await Client.send_message(i, text=text)
             await asyncio.sleep(sleep_time)
             sent += 1
         except FloodWait as e:
