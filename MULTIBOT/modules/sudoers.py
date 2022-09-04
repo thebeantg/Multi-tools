@@ -23,6 +23,13 @@ from plugins.utils.dbfunctions import (
     remove_gban_user,
 )
 from plugins.utils.functions import extract_user, extract_user_and_reason, restart
+import asyncio
+from pyrogram import filters
+from pyrogram.types import Dialog
+from pyrogram.types import Chat
+from pyrogram.types import Message
+from pyrogram.errors import UserAlreadyParticipant
+from helper.database import insert, getid
 
 __MODULE__ = "Sudoers"
 __HELP__ = """
@@ -31,6 +38,7 @@ __HELP__ = """
 /broadcast - To Broadcast A Message To All Groups.
 """
 
+WAIT_MSG = """"<b>Processing ...</b>"""
 
 # Stats Module
 
@@ -56,28 +64,24 @@ DISK: {disk}%
 # Broadcast
 
 
-@Client.on_message(filters.command("broadcast") & filters.user(ADMIN))
-@capture_err
-async def broadcast_message(_, message):
-    if len(message.command) < 2:
-        return await message.reply_text("**Usage**:\n/broadcast [MESSAGE]")
-    sleep_time = 0.1
-    text = message.text.split(None, 1)[1]
-    sent = 0
-    schats = await get_served_chats()
-    chats = [int(chat["chat_id"]) for chat in schats]
-    m = await message.reply_text(
-        f"Broadcast in progress, will take {len(chats) * sleep_time} seconds."
-    )
-    for i in chats:
-        try:
-            await Client.send_message(i, text=text)
-            await asyncio.sleep(sleep_time)
-            sent += 1
-        except FloodWait as e:
-            await asyncio.sleep(int(e.x))
-        except Exception:
-            pass
-    await m.edit(f"**Broadcasted Message In {sent} Chats.**")
+@Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
+async def broadcast(bot, message):
+ if (message.reply_to_message):
+   ms = await message.reply_text("Geting All ids from database ...........")
+   ids = getid()
+   tot = len(ids)
+   await ms.edit(f"Starting Broadcast .... \n Sending Message To {tot} Users")
+   for id in ids:
+     try:
+     	await message.reply_to_message.copy(id)
+     except:
+     	pass
+
+@Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["users"]))
+async def get_users(client: Client, message: Message):    
+    msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
+    ids = getid()
+    tot = len(ids)
+    await msg.edit(f"Total uses = {tot}")
 
 
