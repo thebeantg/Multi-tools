@@ -7,4 +7,4 @@ RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 WORKDIR /app
 
 COPY . .
-CMD python3 plugins
+CMD python3 bot.py
