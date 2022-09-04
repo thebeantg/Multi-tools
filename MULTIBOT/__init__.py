@@ -11,6 +11,7 @@ from pyrogram.types import Message
 from pyromod import listen
 from Python_ARQ import ARQ
 from telegraph import Telegraph
+from variables import ADMIN
 
 is_config = path.exists("variables.py")
 
@@ -19,7 +20,7 @@ if is_config:
 else:
     from sample_config import *
 
-
+ADMIN = ADMIN
 LOG_GROUP_ID = LOG_CHANNEL
 GBAN_LOG_GROUP_ID = LOG_CHANNEL
 MESSAGE_DUMP_CHAT = LOG_CHANNEL
