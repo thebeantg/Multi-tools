@@ -1,5 +1,6 @@
 import os
 import time
+from MULTIBOT import Client
 import asyncio 
 import logging 
 import datetime
