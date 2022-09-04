@@ -18,8 +18,7 @@ async def start_message(bot, message):
     FSub = await ForceSub(bot, message)
     if FSub == 400:
         return 
-    await add_user(bot, message)     
-    await message.reply_chat_action("Typing")          
+    await add_user(bot, message)               
     await message.reply_photo(
         photo=random.choice(PICS),
         caption=f"Hello {message.from_user.mention}👋🏻\nI'am A Multi Featured Bot With Many Variety Features.\neg:- Telegarph, Channel ID, User ID, Fun, Group Id, Sticker id, kang, and othersetc...\nYou can see My commands by below button...",               
