@@ -69,7 +69,7 @@ async def callback(bot, msg):
              text=f"These Are My Developers",
              reply_markup=InlineKeyboardMarkup( [[
                   InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 1", user_id=5172114510),
-                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 2", user_id=900873119)
+                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 2", user_id=5652656279)
                   ],[
                   InlineKeyboardButton("❣️ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐂𝐎𝐃𝐄 ❣️", url="https://github.com/Jeolpaul/TG-MULTI-BOT"),
                   ],[
@@ -195,14 +195,11 @@ Commands and Usage:
                      ]]
                      )
              )
-   elif data == "paste":
+   elif data == "carbon":
          await msg.message.edit(
-             text="""Help: Paste
+             text="""☾︎𝗛𝗘𝗟𝗣 𝗙𝗢𝗥 𝗖𝗔𝗥𝗕𝗢𝗡☽︎
 
-Paste some texts or documents on a website!
-
-Commands and Usage:
-• /paste - Reply To A Message With /paste""",
+◉ /carbon - use this command""",
                  reply_markup=InlineKeyboardMarkup( [[  
                      InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="help"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
