@@ -21,7 +21,7 @@ async def start_message(bot, message):
     await add_user(bot, message)               
     await message.reply_photo(
         photo=random.choice(PICS),
-        caption=f"Hello {message.from_user.mention}👋🏻\nI'am A Multi Featured Bot With Many Variety Features.\neg:- Telegarph, Channel ID, User ID, Fun, Group Id, Sticker id, kang, and othersetc...\nYou can see My commands by below button...",               
+        caption=f"Hello {message.from_user.mention}👋🏻\nI'am A Multi Featured Bot With Many Variety Features.\neg:- Telegarph, Channel ID, User ID, Fun, Group Id, Sticker id, kang, and others, etc...\nYou can see My commands by below button...",               
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("✨️ Support", url="https://t.me/BETA_SUPPORT"),
             InlineKeyboardButton("📢 Updates", url="https://t.me/Beta_BoTZ")
