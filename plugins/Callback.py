@@ -54,7 +54,7 @@ async def callback(bot, msg):
          )        
    elif data == "start":
          await msg.message.edit(
-             text=f"Hello {msg.from_user.mention}👋🏻\nI'am A Multi use Bot with many usefull features.\neg:- Telegarph, Channel ID, User ID, Fun, Group Id etc...\nYou can see My commands by below button... \n\n◉ send channel last message with forwerd tag to get the channel id 💯",          
+             text=f"Hello {msg.from_user.mention}👋🏻\nI'am A Multi Featured Bot With Many Variety Features.\neg:- Telegarph, Channel ID, User ID, Fun, Group Id, Sticker id, kang, and othersetc...\nYou can see My commands by below button...",          
              reply_markup=InlineKeyboardMarkup( [[
                  InlineKeyboardButton("✨️ Support", url="https://t.me/BETA_SUPPORT"),
                  InlineKeyboardButton("📢 Updates", url="https://t.me/Beta_BoTZ")
