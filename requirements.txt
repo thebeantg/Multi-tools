@@ -1,5 +1,6 @@
 git+https://github.com/jeolpaul/pyrogram@inline-m                      
 TgCrypto
+pykeyboard
 asyncio
 dnspython
 telegraph
