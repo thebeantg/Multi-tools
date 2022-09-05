@@ -39,7 +39,7 @@ async def id_message(bot, message):
     if FSub == 400:
         return 
     await message.reply_text(
-    text = f"""<u>👁️‍🗨️YOUR DETAILS</u>
+    text = f"""<u>👁️‍🗨️YOUR ID</u>
 
 ○ ID : <code>{message.from_user.id}</code>""")
 
