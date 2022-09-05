@@ -39,22 +39,9 @@ async def id_message(bot, message):
     if FSub == 400:
         return 
     await message.reply_text(
-    text = f"""<i>
-<u>👁️‍🗨️YOUR DETAILS</u>
+    text = f"""<u>👁️‍🗨️YOUR DETAILS</u>
 
-○ ID : <code>{message.from_user.id}</code>
-○ DC : <code>{message.from_user.dc_id}</code>
-○ First Name : <code>{message.from_user.first_name}<code>
-○ UserName : @{message.from_user.username}
-○ link : <code>https://t.me/{message.from_user.username}</code>
-
-Thank You For Using Me❣️</i>""",
-    reply_markup=InlineKeyboardMarkup( [[
-        InlineKeyboardButton("✨️ Support", url="https://t.me/BETA_SUPPORT"),
-        InlineKeyboardButton("📢 Updates", url="https://t.me/Beta_BoTZ")
-        ]]
-        )
-    )
+○ ID : <code>{message.from_user.id}</code>""")
 
 @Client.on_message(filters.command(["stickerid"]))
 async def stickerid(bot, message): 
