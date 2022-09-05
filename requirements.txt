@@ -12,3 +12,4 @@ aiofiles
 aiohttp
 pillow
 opencv-python-headless
+telegraph
