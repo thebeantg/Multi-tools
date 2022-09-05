@@ -93,7 +93,7 @@ async def callback(bot, msg):
 ◉ /tenpins    
 """,      
              reply_markup=InlineKeyboardMarkup( [[
-                 InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                 InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="help"),
                  InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                  ]]
                  )
@@ -107,7 +107,7 @@ Do as you wish with graph.org module!
 USAGE:
 ◉ /telegraph - reply to below 5Mb media to get telegraph link💯""",
                  reply_markup=InlineKeyboardMarkup( [[  
-                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="help"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
@@ -121,7 +121,7 @@ To Make Square Logo -  /logosq Your Name
 /logo BETAs
 /logosq MKN""",
                  reply_markup=InlineKeyboardMarkup( [[  
-                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="help"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
@@ -135,7 +135,7 @@ To Make Square Logo -  /logosq Your Name
 ➤ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐚𝐧𝐝 𝐔𝐬𝐚𝐠𝐞:
 ➪ 𝖩𝗎𝗌𝗍 𝗌𝖾𝗇𝖽 𝗆𝖾 𝖺 𝗂𝗆𝖺𝗀𝖾 𝗍𝗈 𝖾𝖽𝗂𝗍 ✨""",
                  reply_markup=InlineKeyboardMarkup( [[  
-                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="help"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
@@ -149,7 +149,7 @@ Paste some texts or documents on a website!
 Commands and Usage:
 • /paste - Reply To A Message With /paste""",
                  reply_markup=InlineKeyboardMarkup( [[  
-                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="help"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
@@ -165,7 +165,7 @@ Convert sticker to photo & create sticker pake & find sticker id.....
 ◉ /kang - Reply To Sticker or PNG file to pake sticker 
 ◉ /stickerid - Reply To Any Sticker to get id""",
                  reply_markup=InlineKeyboardMarkup( [[  
-                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="help"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
@@ -176,7 +176,7 @@ Convert sticker to photo & create sticker pake & find sticker id.....
 ◉ /stickerid - Reply To Any Sticker to get sticker id
 ◉ send channel last message with forward tag to get the channel id 💯""",
                  reply_markup=InlineKeyboardMarkup( [[  
-                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="help"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
@@ -190,7 +190,7 @@ Paste some texts or documents on a website!
 Commands and Usage:
 • /paste - Reply To A Message With /paste""",
                  reply_markup=InlineKeyboardMarkup( [[  
-                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="help"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
@@ -204,7 +204,7 @@ Paste some texts or documents on a website!
 Commands and Usage:
 • /paste - Reply To A Message With /paste""",
                  reply_markup=InlineKeyboardMarkup( [[  
-                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="start"),
+                     InlineKeyboardButton("↩️ 𝐁𝐀𝐂𝐊", callback_data="help"),
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
