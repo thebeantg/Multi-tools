@@ -125,7 +125,6 @@ To Make Square Logo -  /logosq Your Name
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
-                 )
              )
    elif data == "editor":
          await msg.message.edit(
@@ -154,7 +153,6 @@ Commands and Usage:
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
-                 )
              )
    elif data == "stcker":
          await msg.message.edit(
@@ -171,7 +169,6 @@ Convert sticker to photo & create sticker pake & find sticker id.....
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
-                 )
              )
    elif data == "ids":
          await msg.message.edit(
@@ -183,7 +180,6 @@ Convert sticker to photo & create sticker pake & find sticker id.....
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
-                 )
              )
    elif data == "paste":
          await msg.message.edit(
@@ -198,7 +194,6 @@ Commands and Usage:
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
-                 )
              )
    elif data == "paste":
          await msg.message.edit(
@@ -213,7 +208,6 @@ Commands and Usage:
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
-                 )
              )
    elif data == "close":
         await msg.message.delete()
