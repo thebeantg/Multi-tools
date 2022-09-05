@@ -166,7 +166,7 @@ async def info(bot, message):
         return 
     await message.reply_text(
             text=f"""<b>➲First Name:</b> {message.from_user.first_name}
-➲User Name: {message.from_user.user_name}
+➲User Name: {message.from_user.username}
 ➲Last Name: {message.from_user.last_name}
 ➲User ID: <code>{message.from_user.id}</code>
 ➲Data Centre: {message.from_user.dc_id}""")
