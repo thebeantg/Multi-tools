@@ -111,7 +111,6 @@ USAGE:
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
-                 )
              )
    elif data == "logo":
          await msg.message.edit(
@@ -141,7 +140,6 @@ To Make Square Logo -  /logosq Your Name
                      InlineKeyboardButton("🔒 𝐂𝐋𝐎𝐒𝐄", callback_data="close")
                      ]]
                      )
-                 )
              )
    elif data == "paste":
          await msg.message.edit(
