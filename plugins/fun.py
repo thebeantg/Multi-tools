@@ -1,6 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-import random
+import asyncio
+import random, re
+
 
 
 RUN_STRINGS = (
@@ -88,4 +90,31 @@ async def ikka(bot, message):
     pic = random.choice(IKKA_STRINGS)
     await message.reply_sticker(pic)
 
-
+@Client.on_message(filters.command("brain", ".") & filters.me)
+async def pijtau(client: Client, message: Message):
+    if message.forward_from:
+        return
+    animation_interval = 1
+    animation_ttl = range(0, 14)
+    await message.edit("brain")
+    animation_chars = [          
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠         <(^_^ <)🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠       <(^_^ <)  🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠     <(^_^ <)    🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠   <(^_^ <)      🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠 <(^_^ <)        🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠<(^_^ <)         🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n(> ^_^)>🧠         🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n  (> ^_^)>🧠       🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n    (> ^_^)>🧠     🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n      (> ^_^)>🧠   🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n        (> ^_^)>🧠 🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n          (> ^_^)>🧠🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n           (> ^_^)>🗑",
+              "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n           <(^_^ <)🗑",
+          ]
+    for i in animation_ttl:
+        	
+            await asyncio.sleep(animation_interval)
+            await message.edit(animation_chars[i %14 ])
+		
