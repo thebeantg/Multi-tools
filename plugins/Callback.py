@@ -1,6 +1,7 @@
 from pyrogram import Client, filters, __version__
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton                              
 from pyrogram.types import CallbackQuery
+from plugins.utils.http import get, SOURCE
 import asyncio
 
 
@@ -65,8 +66,14 @@ async def callback(bot, msg):
                   )
          )
    elif data == "devs":
+         users = await get("https://api.github.com/repos/jeolpaul/TG-MULTI-BOT/contributors")
+         list_of_users = ""
+         count = 1
+         for user in users:
+             list_of_users += (f"**{count}.** [{user['login']}]({user['html_url']})\n")       
+             count += 1 
          await msg.message.edit(
-             text=f"These Are My Developers",
+             text=SOURCE.format(dev=list_of_users),
              reply_markup=InlineKeyboardMarkup( [[
                   InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 1", user_id=5172114510),
                   InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 2", user_id=5652656279)
