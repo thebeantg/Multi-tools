@@ -1,7 +1,17 @@
 from pykeyboard import InlineKeyboard
 from pyrogram.types import InlineKeyboardButton as Ikb
+from os import execvp
+from random import randint
+from re import findall
+from re import sub as re_sub
+from sys import executable
 
-from plugins.utils.functions import get_urls_from_text as is_url
+def is_url(text: str) -> bool:
+    regex = r"""(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]
+                [.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(
+                \([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\
+                ()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))""".strip()
+    return [x[0] for x in findall(regex, str(text))]
 
 
 def keyboard(buttons_list, row_width: int = 2):
