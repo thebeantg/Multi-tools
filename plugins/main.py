@@ -33,15 +33,50 @@ async def start_message(bot, message):
         )
        
          
+              
 @Client.on_message(filters.command("id"))
 async def id_message(bot, message):
     FSub = await ForceSub(bot, message)
     if FSub == 400:
         return 
-    await message.reply_text(
-    text = f"""<u>👁️‍🗨️YOUR ID</u>
+    jeol=await message.reply_text("....please wait.....")
+    await asyncio.sleep(3)
+    await jeol.delete()
+    chat_photo = message.from_user.photo
+    if chat_photo:
+        local_user_photo = await bot.download_media(
+            message=chat_photo.big_file_id
+        )        
+        await message.reply_photo(
+            photo=local_user_photo,
+            quote=True,            
+            caption=f"""<i>
+<u>👁️‍🗨️YOUR DETAILS</u>
+○ ID : <code>{message.from_user.id}</code>
+○ DC : <code>{message.from_user.dc_id}</code>
+○ First Name : <code>{message.from_user.first_name}<code>
+○ UserName : @{message.from_user.username}
+○ link : <code>https://t.me/{message.from_user.username}</code>
+Thank You For Using Me❣️</i>""",
+            parse_mode="html",
+            disable_notification=True
+        )
+        os.remove(local_user_photo)
+    else:          
+        await message.reply_text(
+            text=f"""<i>
+<u>👁️‍🗨️YOUR DETAILS</u>
+○ ID : <code>{message.from_user.id}</code>
+○ DC : <code>{message.from_user.dc_id}</code>
+○ First Name : <code>{message.from_user.first_name}<code>
+○ UserName : @{message.from_user.username}
+○ link : <code>https://t.me/{message.from_user.username}</code>
+Thank You For Using Me❣️</i>""",            
+            quote=True,
+            parse_mode="html",
+            disable_notification=True
+        )
 
-○ ID : <code>{message.from_user.id}</code>""")
 
 @Client.on_message(filters.command(["stickerid"]))
 async def stickerid(bot, message): 
@@ -157,8 +192,9 @@ async def repo(client, message):
         count += 1
     text = f"""[Github](https://github.com/Jeolpaul/TG-MULTI-BOT) | [Updates](t.me/beta_botz)\n```----------------\n| Contributors |\n----------------```\n{list_of_users}"""
     await client.send_message(chat_id=message.chat.id, text=text, disable_web_page_preview=True)
-    
 
+    
+"""
 @Client.on_message(filters.command(["info"]))
 async def info(bot, message):
     FSub = await ForceSub(bot, message)
@@ -170,3 +206,4 @@ async def info(bot, message):
 ➲Last Name: {message.from_user.last_name}
 ➲User ID: <code>{message.from_user.id}</code>
 ➲Data Centre: {message.from_user.dc_id}""")
+"""
