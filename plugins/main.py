@@ -194,18 +194,4 @@ async def repo(client, message):
     await client.send_message(chat_id=message.chat.id, text=text, disable_web_page_preview=True)
 
     
-"""
 
-@Client.on_message(filters.command(["info"]))
-async def info(bot, message):
-    FSub = await ForceSub(bot, message)
-    if FSub == 400:
-        return 
-    await message.reply_text(
-           # text=f"""<b>➲First Name:</b> {message.from_user.first_name}
-➲User Name: @{message.from_user.username}
-➲Last Name: {message.from_user.last_name}
-➲User ID: <code>{message.from_user.id}</code>
-#➲Data Centre: {message.from_user.dc_id}""")
-
-"""
