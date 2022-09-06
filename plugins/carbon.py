@@ -1,47 +1,36 @@
-from pyrogram import filters, Client as bot
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from asyncio import gather
+from pyrogram import filters
 from aiohttp import ClientSession
-
-import aiofiles
-from PIL import Image
-from pyrogram.types import Message
-
+from pyrogram import Client
+from helper.fsub import ForceSub
+from plugins.utils.functions import make_carbon
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 aiohttpsession = ClientSession()
 
-async def make_carbon(code):
-    url = "https://carbonara.vercel.app/api/cook"
-    async with aiohttpsession.post(url, json={"code": code}) as resp:
-        image = BytesIO(await resp.read())
-    image.name = "carbon.png"
-    return image
 
-
-C = "**MADE WITH ❤️ BY >JEOL**"
-F = InlineKeyboardMarkup(
-[[
-     InlineKeyboardButton("JOIN CHANNEL", url="https://t.me/beta_boTZ")
-]]
-)
-
-
-@bot.on_message(filters.command("carbon"))
+@Client.on_message(filters.command("carbon"))
 async def carbon_func(_, message):
+    FSub = await ForceSub(_, message)
+    if FSub == 400:
+        return
     if not message.reply_to_message:
         return await message.reply_text(
-            "REPLY TO A TEXT MESSAGE TO MAKE CARBON."
+            "ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴀᴋᴇ ᴄᴀʀʙᴏɴ."
         )
     if not message.reply_to_message.text:
         return await message.reply_text(
-            "REPLY TO A TEXT MESSAGE TO MAKE CARBON."
+            "ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴀᴋᴇ ᴄᴀʀʙᴏɴ."
         )
     user_id = message.from_user.id
-    m = await message.reply_text("Processing...")
+    m = await message.reply_text("ᴘʀᴏᴄᴇssɪɴɢ...")
     carbon = await make_carbon(message.reply_to_message.text)
-    await m.edit("Uploading..")
+    await m.edit("ᴜᴘʟᴏᴀᴅɪɴɢ..")
     await message.reply_photo(
         photo=carbon,
-        caption=C,
-        reply_markup=F)
+        caption="**MADE WITH ❤️ BY >JEOL**",
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("JOIN CHANNEL", url="https://t.me/beta_boTZ")                  
+            ]]
+        )
+    )
     await m.delete()
     carbon.close()
