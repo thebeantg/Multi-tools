@@ -2,6 +2,12 @@ from asyncio import gather
 
 from helper.aio import aiohttpsession as session
 
+SOURCE = """[Github](https://github.com/Jeolpaul/TG-MULTI-BOT) | [Updates](t.me/beta_botz)
+```----------------
+| Contributors |
+----------------```
+{dev} """
+
 
 async def get(url: str, *args, **kwargs):
     async with session.get(url, *args, **kwargs) as resp:
