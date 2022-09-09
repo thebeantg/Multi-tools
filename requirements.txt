@@ -12,4 +12,11 @@ aiofiles
 aiohttp
 pillow
 opencv-python-headless
-telegraph
+wget
+yt-dlp
+youtube_search_python
+youtube_search
+ytthumb
+youtube-dl
+gTTS
+googletrans==3.1.0a0
