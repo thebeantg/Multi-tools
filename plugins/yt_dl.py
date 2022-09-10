@@ -28,9 +28,6 @@ def time_to_seconds(time):
 
 @Client.on_message(filters.command('song') & filters.private)
 def song(client, message):
-    FSub = await ForceSub(client, message)
-    if FSub == 400:
-        return
     user_id = message.from_user.id 
     user_name = message.from_user.first_name 
     rpk = "["+user_name+"](tg://user?id="+str(user_id)+")"
@@ -52,7 +49,7 @@ def song(client, message):
         open(thumb_name, 'wb').write(thumb.content)
 
 
-        performer = f"[Mᴋɴ Bᴏᴛᴢ™]" 
+        performer = f"[Jeol]" 
         duration = results[0]["duration"]
         url_suffix = results[0]["url_suffix"]
         views = results[0]["views"]
@@ -69,7 +66,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = '**BY›› [Mᴋɴ Bᴏᴛᴢ™](https://t.me/mkn_bots_updates)**'
+        rep = '**BY›› [TG MULTI BOT](https://github.com/Jeolpaul/TG-MULTI-BOT)**'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
