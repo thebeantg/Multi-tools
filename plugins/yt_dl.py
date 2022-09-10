@@ -28,10 +28,6 @@ def time_to_seconds(time):
 
 @Client.on_message(filters.command('song') & filters.private)
 def song(client, message):
-    FSub = await ForceSub(_, message)
-    if FSub == 400:
-        return
-
     user_id = message.from_user.id 
     user_name = message.from_user.first_name 
     rpk = "["+user_name+"](tg://user?id="+str(user_id)+")"
