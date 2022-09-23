@@ -75,8 +75,8 @@ async def callback(bot, msg):
          await msg.message.edit(
              text=SOURCE.format(dev=list_of_users),
              reply_markup=InlineKeyboardMarkup( [[
-                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 1", user_id=5172114510),
-                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 2", url="https://t.me/Mr_MKN")
+                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 1", user_id=5665348252),
+                  InlineKeyboardButton("👨‍💻 𝐃𝐄𝐕𝐒 2", user_id=5652656279)
                   ],[
                   InlineKeyboardButton("❣️ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐂𝐎𝐃𝐄 ❣️", url="https://github.com/Jeolpaul/TG-MULTI-BOT"),
                   ],[
