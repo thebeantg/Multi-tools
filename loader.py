@@ -19,7 +19,13 @@ class App(Client):
        self.name = me.first_name
        self.mention = me.mention
        self.username = me.username
-       
+       print(f'{me.first_name} is Started...🍃')
+
+    async def stop(self, *args):
+       await super().stop()      
+       print("Bot restarting.....")
+        
+                           
   
 bot = App()
 bot.run()
