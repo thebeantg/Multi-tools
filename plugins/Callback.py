@@ -168,14 +168,13 @@ async def callback(client: Client, query: CallbackQuery):
        buttons = [[
            InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
            InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
-       ]]
-       await query.answer("Comming Soon........", show_alert=True)    
-       #await query.message.edit(
-           #text=tg.FONT,
-           #reply_markup=InlineKeyboardMarkup(buttons),
-           #disable_web_page_preview = True,
-           #parse_mode='html'      
-       #)    
+       ]]    
+       await query.message.edit(
+           text=tg.FONT,
+           reply_markup=InlineKeyboardMarkup(buttons),
+           disable_web_page_preview = True,
+           parse_mode='html'      
+       )    
     elif query.data == "fun":
        buttons = [[
            InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
