@@ -1,6 +1,6 @@
 import asyncio
 import pyrogram
-from txt import tg
+from plugins import txt as tg
 from plugins.utils.http import get
 from plugins.font_btn import style_btn_back, nxt_fonts_nxt, style_btn_editz
 from pyrogram import Client, filters, __version__
