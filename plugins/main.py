@@ -11,7 +11,7 @@ import random
 import time
 from helper.errors import capture_err
 from plugins.utils.http import get
-
+form plugins import txt
 
 @Client.on_message(filters.private & filters.command("start"))
 async def start_message(bot, message):
@@ -33,63 +33,60 @@ async def start_message(bot, message):
         )
        
          
-              
-@Client.on_message(filters.command("id"))
-async def id_message(bot, message):
-    FSub = await ForceSub(bot, message)
+                                     
+@Client.on_message(filters.command(["id", "info"], ["/", "."]))
+async def media_info(bot, m): 
+    FSub = await ForceSub(bot, m)
     if FSub == 400:
-        return 
-    jeol=await message.reply_text("....please wait.....")
-    await asyncio.sleep(3)
-    await jeol.delete()
-    chat_photo = message.from_user.photo
-    if chat_photo:
-        local_user_photo = await bot.download_media(
-            message=chat_photo.big_file_id
-        )        
-        await message.reply_photo(
-            photo=local_user_photo,
-            quote=True,            
-            caption=f"""<i>
-<u>👁️‍🗨️YOUR DETAILS</u>
-○ ID : <code>{message.from_user.id}</code>
-○ DC : <code>{message.from_user.dc_id}</code>
-○ First Name : <code>{message.from_user.first_name}<code>
-○ UserName : @{message.from_user.username}
-○ link : <code>https://t.me/{message.from_user.username}</code>
-Thank You For Using Me❣️</i>""",
-            parse_mode="html",
-            disable_notification=True
-        )
-        os.remove(local_user_photo)
-    else:          
-        await message.reply_text(
-            text=f"""<i>
-<u>👁️‍🗨️YOUR DETAILS</u>
-○ ID : <code>{message.from_user.id}</code>
-○ DC : <code>{message.from_user.dc_id}</code>
-○ First Name : <code>{message.from_user.first_name}<code>
-○ UserName : @{message.from_user.username}
-○ link : <code>https://t.me/{message.from_user.username}</code>
-Thank You For Using Me❣️</i>""",            
-            quote=True,
-            parse_mode="html",
-            disable_notification=True
-        )
-
-
-@Client.on_message(filters.command(["stickerid"]))
-async def stickerid(bot, message): 
-    FSub = await ForceSub(bot, message)
-    if FSub == 400:
-        return 
-    if message.reply_to_message.sticker:
-       await message.reply(f"**Sticker ID is**  \n `{message.reply_to_message.sticker.file_id}` \n \n ** Unique ID is ** \n\n`{message.reply_to_message.sticker.file_unique_id}`", quote=True)
-    else: 
-       await message.reply("Oops !! Not a sticker file")
-
-
-
+        return
+    message = m
+    ff = m.from_user
+    md = m.reply_to_message
+    if md:
+       try:
+          if md.photo:
+              await m.reply_text(text=f"**your photo id is **\n\n`{md.photo.file_id}`") 
+          if md.sticker:
+              await m.reply_text(text=f"**your sticker id is **\n\n`{md.sticker.file_id}`")
+          if md.video:
+              await m.reply_text(text=f"**your video id is **\n\n`{md.video.file_id}`")
+          if md.document:
+              await m.reply_text(text=f"**your document id is **\n\n`{md.document.file_id}`")
+          if md.audio:
+              await m.reply_text(text=f"**your audio id is **\n\n`{md.audio.file_id}`")
+          if md.text:
+              await m.reply_text("**hey man please reply with ( photo, video, sticker, documents, etc...) Only media **")  
+          else:
+              print("[404] Error..🤖]")                                                                                      
+       except Exception as e:
+          print(e)
+                                        
+    if not md:
+        buttons = [[
+            InlineKeyboardButton("✨️ Support", url="https://t.me/BETA_SUPPORT"),
+            InlineKeyboardButton("📢 Updates", url="https://t.me/Beta_BoTZ")
+        ],[            
+        await m.reply("please wait....")
+        await asyncio.sleep(3)
+        if ff.photo:
+           user_dp = await bot.download_media(message=ff.photo.big_file_id)
+           await m.reply_photo(
+               photo=user_dp,
+               caption=txt.INFO_TXT.format(id=ff.id, dc=ff.dc_id, n=ff.first_name, u=ff.username),
+               reply_markup=InlineKeyboardMarkup(buttons),
+               quote=True,
+               parse_mode="html",
+               disable_notification=True
+           )          
+           os.remove(user_dp)
+        else:  
+           await m.reply_text(
+               text=txt.INFO_TXT.format(id=ff.id, dc=ff.dc_id, n=ff.first_name, u=ff.username),
+               reply_markup=InlineKeyboardMarkup(buttons),
+               quote=True,
+               parse_mode="html",
+               disable_notification=True
+           )
 
 
 @Client.on_message(filters.command("logosq") & filters.incoming & filters.text & ~filters.forwarded & filters.private)
