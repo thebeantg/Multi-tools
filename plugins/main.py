@@ -32,8 +32,7 @@ async def start_message(bot, message):
             )
         )
        
-         
-                                     
+                                              
 @Client.on_message(filters.command(["id", "info"], ["/", "."]))
 async def media_info(bot, m): 
     FSub = await ForceSub(bot, m)
