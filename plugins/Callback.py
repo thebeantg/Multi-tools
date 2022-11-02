@@ -205,7 +205,7 @@ async def callback(client: Client, query: CallbackQuery):
            list_of_users += (f"**{count}.** [{user['login']}]({user['html_url']})\n")       
            count += 1
        buttons = [[
-           InlineKeyboardButton("👨‍💻 𝙳𝙴𝚅 1", user_id=5172114510),
+           InlineKeyboardButton("👨‍💻 𝙳𝙴𝚅 1", url="https://t.me/ABOUT_JEOL"),
            InlineKeyboardButton("👨‍💻 𝙳𝙴𝚅 2", url="https://t.me/Mr_MKN")
            ],[
            InlineKeyboardButton("❣️ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐂𝐎𝐃𝐄 ❣️", url="https://github.com/Jeolpaul/TG-MULTI-BOT"),
