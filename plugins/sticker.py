@@ -158,7 +158,7 @@ async def kang(client, message: Message):
                 stickerset = await create_sticker_set(
                     client,
                     message.from_user.id,
-                    f"{message.from_user.first_name[:32]}'s | @BETA_BOTZ Pack",
+                    f"{message.from_user.first_name[:32]}'s | @HELL_BOTZ Pack",
                     packname,
                     [sticker],
                 )
