@@ -34,7 +34,7 @@ async def font_style_buttons(c, m: Message):
         InlineKeyboardButton('H̆̈ă̈p̆̈p̆̈y̆̈', callback_data='style+happy'),
         InlineKeyboardButton('S̑̈ȃ̈d̑̈', callback_data='style+sad'),
         ],[
-        InlineKeyboardButton('Next ➡️', callback_data="nxt")
+        InlineKeyboardButton('▷', callback_data="nxt")
     ]]  
     
     if ' ' in m.text:
@@ -74,7 +74,7 @@ async def style_btn_back(c, m: CallbackQuery):
         InlineKeyboardButton('H̆̈ă̈p̆̈p̆̈y̆̈', callback_data='style+happy'),
         InlineKeyboardButton('S̑̈ȃ̈d̑̈', callback_data='style+sad'),
         ],[
-        InlineKeyboardButton('Next ➡️', callback_data="nxt")
+        InlineKeyboardButton('▷', callback_data="nxt")
     ]]  
     await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
        
@@ -105,7 +105,7 @@ async def nxt_fonts_nxt(c, m: CallbackQuery):
             InlineKeyboardButton('S̶t̶r̶i̶k̶e̶', callback_data='style+strike'),
             InlineKeyboardButton('F༙r༙o༙z༙e༙n༙', callback_data='style+frozen')
             ],[
-            InlineKeyboardButton('⬅️ Back', callback_data='fontblack')
+            InlineKeyboardButton('◁', callback_data='fontblack')
         ]]        
         await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
     
@@ -192,7 +192,7 @@ async def style_btn_editz(c, m, style):
     r, oldtxt = m.message.reply_to_message.text.split(None, 1) 
     new_text = cls(oldtxt)            
     try:
-        await m.message.edit_text(f"`{new_text}`\n\n👆 Click To Copy", reply_markup=m.message.reply_markup)
+        await m.message.edit_text(f"`{new_text}`\n\nClick To Copy", reply_markup=m.message.reply_markup)
     except Exception as e:
         print(e)
 
