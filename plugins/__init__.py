@@ -140,5 +140,5 @@ Translate text to speech
 ○ UserName : @{u}
 ○ link : <code>https://t.me/{u}</code>
 
-</i>"""
+[MULTI TOOLS BOT](http://t.me/MULTI_TOOLS_RBOT)</i>"""
 
