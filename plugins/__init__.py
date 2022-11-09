@@ -5,11 +5,11 @@ class txt(object):
  𝘐'𝘢𝘮 𝘈 𝘔𝘶𝘭𝘵𝘪 𝘶𝘴𝘦 𝘉𝘰𝘵 𝘸𝘪𝘵𝘩 𝘮𝘢𝘯𝘺 𝘶𝘴𝘦𝘧𝘶𝘭𝘭 𝘧𝘦𝘢𝘵𝘶𝘳𝘦𝘴. 𝘈𝘭𝘭 𝘰𝘧 𝘮𝘺 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴 𝘢𝘳𝘦 𝘭𝘪𝘴𝘵𝘦𝘥 𝘪𝘯 𝘵𝘩𝘦 𝘩𝘦𝘭𝘱 𝘣𝘶𝘵𝘵𝘰𝘯 😌"""
 
     ABT = """ 
-╔════❰ {bot} ❱═❍
+╔════❰ ᴀʙᴏᴜᴛ ❱═❍
 
 ║╭━━━━━━━━━━━━━━━➣
 
-║┣⪼ ᴍʏ ɴᴀᴍᴇ : [MULTI TOOLS BOT](http://t.me/MULTI_TOOLS_RBOT)
+║┣⪼ ᴍʏ ɴᴀᴍᴇ : {bot}
 
 ║┣⪼ ᴅᴇᴠ : <a href=https://t.me/about_beantg>Bᴇᴀɴ</a>
 
@@ -19,7 +19,7 @@ class txt(object):
 
 ║┣⪼ ʟɪʙʀᴀʀʏ : <a href=https://github.com/pyrogram>ᴘʏʀᴏɢʀᴀᴍ</a> 
 
-║┣⪼ ᴠᴇʀsɪᴏɴ : {bot} v3.0.1 
+║┣⪼ ᴠᴇʀsɪᴏɴ : v3.0.1 
 
 ║╰━━━━━━━━━━━━━━━➣
 
@@ -140,5 +140,5 @@ Translate text to speech
 ○ UserName : @{u}
 ○ link : <code>https://t.me/{u}</code>
 
-[MULTI TOOLS BOT](http://t.me/MULTI_TOOLS_RBOT)</i>"""
+[MULTI @hell_botz</i>"""
 
