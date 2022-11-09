@@ -38,8 +38,8 @@ media = [photo, video, audio, documents, sticker]"""
    
     FUN = """<b><u>JUST TEST THIS COMMANDS 😉</u></b>
 
-◉ /runs         
 
+◉ /runs
 ◉ /dice     
 ◉ /arrow    
 ◉ /goal    
@@ -124,7 +124,7 @@ Translate text to speech
 • These commands works on both pm and group.
 • this can translate texts to 200+ languages."""
 
-    SOURCE = """[Github](https://github.com/Jeolpaul/TG-MULTI-BOT) | [Updates](t.me/beta_botz)
+    SOURCE = """[Github](https://github.com) | [Updates](t.me/hell_botz)
 ```----------------
 | Contributors |
 ----------------```
@@ -140,5 +140,5 @@ Translate text to speech
 ○ UserName : @{u}
 ○ link : <code>https://t.me/{u}</code>
 
-Thank You For Using Me❣️</i>"""
+</i>"""
 
