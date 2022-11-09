@@ -9,7 +9,7 @@ Eg:- Telegarph, Channel ID, Image editor etc... """
 
 ║╭━━━━━━━━━━━━━━━➣
 
-║┣⪼ ᴍʏ ɴᴀᴍᴇ : {bot}
+║┣⪼ ᴍʏ ɴᴀᴍᴇ : [MULTI TOOLS BOT](http://t.me/MULTI_TOOLS_RBOT)
 
 ║┣⪼ ᴅᴇᴠ : <a href=https://t.me/about_beantg>Bᴇᴀɴ</a>
 
