@@ -25,19 +25,19 @@ async def callback(client: Client, query: CallbackQuery):
        await query.message.edit(
            text = tg.STAT.format(query.from_user.mention),        
            reply_markup=InlineKeyboardMarkup( [[
-               InlineKeyboardButton("🍁 ꜱᴜᴩᴩᴏʀᴛ", url="https://t.me/BETA_SUPPORT"),
-               InlineKeyboardButton("📯 ᴜᴩᴅᴀᴛᴇꜱ", url="https://t.me/Beta_BoTZ")
+               InlineKeyboardButton("ꜱᴜᴩᴩᴏʀᴛ", url="https://t.me/Hellbotsupport"),
+               InlineKeyboardButton("ᴜᴩᴅᴀᴛᴇꜱ", url="https://t.me/hell_botz")
                ],[            
-               InlineKeyboardButton("ℹ️ ʜᴇʟᴩ", callback_data="help"),
-               InlineKeyboardButton("📡 ᴀʙᴏᴜᴛ", callback_data="about")
+               InlineKeyboardButton("ʜᴇʟᴩ", callback_data="help"),
+               InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about")
                ],[
-               InlineKeyboardButton("❤️‍🔥 ᴅᴇᴠᴇʟᴏᴩᴇʀꜱ ❤️‍🔥", callback_data="source")   
+               InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀꜱ", callback_data="source")   
                ]]
                )
        )
     elif query.data == "help":
         buttons = [[                           
-            InlineKeyboardButton('🍁 ɪɴꜰᴏ & ɪᴅ 🍁', callback_data='info')
+            InlineKeyboardButton('ɪɴꜰᴏ & ɪᴅ', callback_data='info')
             ],[
             InlineKeyboardButton('ʟᴏɢᴏ ᴍᴀᴋᴇʀ', callback_data='logomake'),            
             InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴩʜ', callback_data='tgraph')
@@ -54,10 +54,8 @@ async def callback(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴄᴀʀʙᴏɴ', callback_data='carben'),
             InlineKeyboardButton('ꜰᴜɴ ɢᴀᴍᴇ', callback_data='fun')                      
             ],[
-            InlineKeyboardButton('❤️‍🔥 ꜱᴏᴜʀᴄᴇ', callback_data='source'),
-            InlineKeyboardButton('📡 ᴀʙᴏᴜᴛ', callback_data='about')
-            ],[
-            InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='start'),           
+            InlineKeyboardButton('◁', callback_data='start'),
+                       
         ]]
         await query.message.edit_text(                     
             text=tg.HELP,
@@ -67,8 +65,8 @@ async def callback(client: Client, query: CallbackQuery):
     
     elif query.data == "info":
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="help"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.INFO,
@@ -78,8 +76,8 @@ async def callback(client: Client, query: CallbackQuery):
        )       
     elif query.data == "logomake":
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="help"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.LOGO,
@@ -89,8 +87,8 @@ async def callback(client: Client, query: CallbackQuery):
        )    
     elif query.data == "tgraph":
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="help"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.TELE,
@@ -100,8 +98,8 @@ async def callback(client: Client, query: CallbackQuery):
        )   
     elif query.data == "tts":
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="help"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.TTS,
@@ -111,8 +109,8 @@ async def callback(client: Client, query: CallbackQuery):
        )   
     elif query.data == "ytdl":
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="help"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.YTDL,
@@ -122,8 +120,8 @@ async def callback(client: Client, query: CallbackQuery):
        )    
     elif query.data == "phediter":
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="help"),
+           InlineKeyboardButton("", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.IMAGE,
@@ -133,8 +131,8 @@ async def callback(client: Client, query: CallbackQuery):
        )    
     elif query.data == "paster":
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="help"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.PASTE,
@@ -144,8 +142,8 @@ async def callback(client: Client, query: CallbackQuery):
        )    
     elif query.data == "carben":
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="help"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.CARB_TXT,
@@ -155,8 +153,8 @@ async def callback(client: Client, query: CallbackQuery):
        )    
     elif query.data == "stickertool":
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="help"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.STICKER,
@@ -166,8 +164,8 @@ async def callback(client: Client, query: CallbackQuery):
        )    
     elif query.data == "fontstyle":
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="help"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]    
        await query.message.edit(
            text=tg.FONT,
@@ -177,8 +175,8 @@ async def callback(client: Client, query: CallbackQuery):
        )    
     elif query.data == "fun":
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="help"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="help"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.FUN,
@@ -188,8 +186,8 @@ async def callback(client: Client, query: CallbackQuery):
        )    
     elif query.data == "about":       
        buttons = [[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="start"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="start"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.ABT.format(v=__version__, bot=client.mention),
@@ -205,13 +203,13 @@ async def callback(client: Client, query: CallbackQuery):
            list_of_users += (f"**{count}.** [{user['login']}]({user['html_url']})\n")       
            count += 1
        buttons = [[
-           InlineKeyboardButton("👨‍💻 𝙳𝙴𝚅 1", url="https://t.me/ABOUT_JEOL"),
-           InlineKeyboardButton("👨‍💻 𝙳𝙴𝚅 2", url="https://t.me/Mr_MKN")
+           InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/about_beantg"),
+           InlineKeyboardButton("ʙᴏᴛᴢ", url="https://t.me/hell_botz")
            ],[
-           InlineKeyboardButton("❣️ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐂𝐎𝐃𝐄 ❣️", url="https://github.com/Jeolpaul/TG-MULTI-BOT"),
+           InlineKeyboardButton("ꜱᴏᴜʀᴄᴇ", url="https://graph.org/file/93c32d542399597c005e4.jpg"),
            ],[
-           InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="start"),
-           InlineKeyboardButton("🔒 ᴄʟᴏꜱᴇ", callback_data="close")
+           InlineKeyboardButton("◁", callback_data="start"),
+           InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
        ]]               
        await query.message.edit(
            text=tg.SOURCE.format(dev=list_of_users),
@@ -223,12 +221,12 @@ async def callback(client: Client, query: CallbackQuery):
        await query.message.edit_text(
            text="**Select required mode**",
            reply_markup=InlineKeyboardMarkup( [[
-               InlineKeyboardButton(text="𝖶𝗂𝗍𝗁 𝖶𝗁𝗂𝗍𝖾 𝖡𝖦", callback_data="rmbgwhite"),
-               InlineKeyboardButton(text="𝖶𝗂𝗍𝗁𝗈𝗎𝗍 𝖡𝖦", callback_data="rmbgplain"),
+               InlineKeyboardButton(text="Wɪᴛʜ ᴡʜɪᴛᴇ ʙɢ", callback_data="rmbgwhite"),
+               InlineKeyboardButton(text="Wɪᴛʜᴏᴜᴛ ʙɢ", callback_data="rmbgplain"),
                ],[
-               InlineKeyboardButton(text="𝖲𝗍𝗂𝖼𝗄𝖾𝗋", callback_data="rmbgsticker"),
+               InlineKeyboardButton(text="Sᴛɪᴄᴋᴇʀ", callback_data="rmbgsticker"),
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+               InlineKeyboardButton('◁', callback_data='photo')
                ]]
            )
        )
@@ -236,12 +234,12 @@ async def callback(client: Client, query: CallbackQuery):
        await query.message.edit(
            text="**Select a Type**",
            reply_markup=InlineKeyboardMarkup( [[
-               InlineKeyboardButton(text="𝖭𝗈𝗋𝗆𝖺𝗅", callback_data="stkr"),
-               InlineKeyboardButton(text="𝖤𝖽𝗀𝖾 𝖢𝗎𝗋𝗏𝖾𝖽", callback_data="cur_ved"),
+               InlineKeyboardButton(text="Nᴏʀᴍᴀʟ", callback_data="stkr"),
+               InlineKeyboardButton(text="Eᴅɢᴇ ᴄᴜʀᴠᴇᴅ", callback_data="cur_ved"),
                ],[                    
-               InlineKeyboardButton(text="𝖢𝗂𝗋𝖼𝗅𝖾", callback_data="circle_sticker")
+               InlineKeyboardButton(text="Cɪʀᴄʟᴇ", callback_data="circle_sticker")
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+               InlineKeyboardButton('◁', callback_data='photo')
                ]]                
            )
        )
@@ -254,7 +252,7 @@ async def callback(client: Client, query: CallbackQuery):
                ],[
                InlineKeyboardButton(text="270", callback_data="270")
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+               InlineKeyboardButton('◁', callback_data='photo')
                ]]
            )
        )
@@ -262,10 +260,10 @@ async def callback(client: Client, query: CallbackQuery):
        await query.message.edit_text(
            text="**Select required mode**",
            reply_markup=InlineKeyboardMarkup( [[
-               InlineKeyboardButton(text="𝖭𝗈𝗋𝗆𝖺𝗅", callback_data="normalglitch"),
-               InlineKeyboardButton(text="𝖲𝖼𝖺𝗇 𝖫𝖺𝗂𝗇𝗌", callback_data="scanlineglitch")
+               InlineKeyboardButton(text="Nᴏʀᴍᴀʟ", callback_data="normalglitch"),
+               InlineKeyboardButton(text="Sᴄᴀɴ ʟᴀɪɴᴀ", callback_data="scanlineglitch")
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+               InlineKeyboardButton('◁', callback_data='photo')
                ]]
            )
        )
@@ -280,7 +278,7 @@ async def callback(client: Client, query: CallbackQuery):
                InlineKeyboardButton(text="4", callback_data="normalglitch4"),
                InlineKeyboardButton(text="5", callback_data="normalglitch5"),
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='glitch')
+               InlineKeyboardButton('◁', callback_data='glitch')
                ]]
            )
        )
@@ -295,7 +293,7 @@ async def callback(client: Client, query: CallbackQuery):
                InlineKeyboardButton(text="4", callback_data="scanlineglitch4"),
                InlineKeyboardButton(text="5", callback_data="scanlineglitch5"),
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='glitch')
+               InlineKeyboardButton('◁', callback_data='glitch')
                ]]
            )
        )
@@ -303,12 +301,12 @@ async def callback(client: Client, query: CallbackQuery):
        await query.message.edit(
            text="**Select a Type**",
            reply_markup=InlineKeyboardMarkup( [[
-               InlineKeyboardButton(text="𝖡𝗈𝗑", callback_data="box"),
-               InlineKeyboardButton(text="𝖭𝗈𝗋𝗆𝖺𝗅", callback_data="normal"),
+               InlineKeyboardButton(text="Bᴏx", callback_data="box"),
+               InlineKeyboardButton(text="Nᴏʀᴍᴀʟ", callback_data="normal"),
                ],[
-               InlineKeyboardButton(text="𝖦𝖺𝗎𝗌𝗌𝗂𝖺𝗇", callback_data="gas")
+               InlineKeyboardButton(text="Gᴀᴜꜱꜱɪᴀɴ", callback_data="gas")
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+               InlineKeyboardButton('◁', callback_data='photo')
                ]]
            )
        )
@@ -316,10 +314,10 @@ async def callback(client: Client, query: CallbackQuery):
        await query.message.edit_text(
            text="**Select required mode**",
            reply_markup=InlineKeyboardMarkup( [[
-               InlineKeyboardButton(text="𝖶𝗂𝗍𝗁 𝖡𝖦", callback_data="circlewithbg"),
-               InlineKeyboardButton(text="𝖶𝗂𝗍𝗁𝗈𝗎𝗍 𝖡𝖦", callback_data="circlewithoutbg"),
+               InlineKeyboardButton(text="Wɪᴛʜ ʙɢ", callback_data="circlewithbg"),
+               InlineKeyboardButton(text="Wɪᴛʜᴏᴜᴛ ʙɢ", callback_data="circlewithoutbg"),
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+               InlineKeyboardButton('◁', callback_data='photo')
                ]]
            )
        )
@@ -327,13 +325,13 @@ async def callback(client: Client, query: CallbackQuery):
        await query.message.edit(
            text="**Select Border**",
            reply_markup=InlineKeyboardMarkup( [[
-               InlineKeyboardButton(text="𝖱𝖾𝖽", callback_data="red"),
-               InlineKeyboardButton(text="𝖦𝗋𝖾𝖾𝗇", callback_data="green"),
+               InlineKeyboardButton(text="Rᴇᴅ", callback_data="red"),
+               InlineKeyboardButton(text="Gʀᴇᴇɴ", callback_data="green"),
                ],[
-               InlineKeyboardButton(text="𝖡𝗅𝖺𝖼𝗄", callback_data="black"),
-               InlineKeyboardButton(text="𝖡𝗅𝗎𝖾", callback_data="blue"),
+               InlineKeyboardButton(text="Bʟᴀᴄᴋ", callback_data="black"),
+               InlineKeyboardButton(text="Bʟᴜᴇ", callback_data="blue"),
                ],[                    
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')   
+               InlineKeyboardButton('◁', callback_data='photo')   
                ]]                
            )
        )
@@ -411,27 +409,27 @@ async def callback(client: Client, query: CallbackQuery):
         await removebg_sticker(client, query.message)
     elif query.data == "photo":
         buttons = [[
-            InlineKeyboardButton(text="𝖡𝗋𝗂𝗀𝗍𝗁", callback_data="bright"),
-            InlineKeyboardButton(text="𝖬𝗂𝗑𝖾𝖽", callback_data="mix"),
-            InlineKeyboardButton(text="𝖡 & 𝖶", callback_data="b|w"),
+            InlineKeyboardButton(text="Bʀɪɢʜᴛ", callback_data="bright"),
+            InlineKeyboardButton(text="Mɪxᴇᴅ", callback_data="mix"),
+            InlineKeyboardButton(text="Bʟᴀᴄᴋ & ᴡʜɪᴛᴇ", callback_data="b|w"),
             ],[
-            InlineKeyboardButton(text="𝖢𝗂𝗋𝖼𝗅𝖾", callback_data="circle"),
-            InlineKeyboardButton(text="𝖡𝗅𝗎𝗋", callback_data="blur"),
-            InlineKeyboardButton(text="𝖡𝗈𝗋𝖽𝖾𝗋", callback_data="border"),
+            InlineKeyboardButton(text="Cɪʀᴄʟᴇ", callback_data="circle"),
+            InlineKeyboardButton(text="Bʟᴜʀ", callback_data="blur"),
+            InlineKeyboardButton(text="Bᴏʀᴅᴇʀ", callback_data="border"),
             ],[
-            InlineKeyboardButton(text="𝖲𝗍𝗂𝖼𝗄𝖾𝗋", callback_data="stick"),
-            InlineKeyboardButton(text="𝖱𝗈𝗍𝖺𝗍𝖾", callback_data="rotate"),
-            InlineKeyboardButton(text="𝖢𝗈𝗇𝗍𝗋𝖺𝗌𝗍", callback_data="contrast"),
+            InlineKeyboardButton(text="Sᴛɪᴄᴋᴇʀ", callback_data="stick"),
+            InlineKeyboardButton(text="Rᴏᴛᴀᴛᴇ", callback_data="rotate"),
+            InlineKeyboardButton(text="Cᴏɴᴛʀᴀꜱᴛ", callback_data="contrast"),
             ],[
-            InlineKeyboardButton(text="𝖲𝖾𝗉𝗂𝖺", callback_data="sepia"),
-            InlineKeyboardButton(text="𝖯𝖾𝗇𝖼𝗂𝗅", callback_data="pencil"),
-            InlineKeyboardButton(text="𝖢𝖺𝗋𝗍𝗈𝗈𝗇", callback_data="cartoon"),
+            InlineKeyboardButton(text="Sᴇᴩɪᴀ", callback_data="sepia"),
+            InlineKeyboardButton(text="Pᴇɴᴄɪʟ", callback_data="pencil"),
+            InlineKeyboardButton(text="Cᴀʀᴛᴏᴏɴ", callback_data="cartoon"),
             ],[
-            InlineKeyboardButton(text="𝖨𝗇𝗏𝖾𝗋𝗍", callback_data="inverted"),
-            InlineKeyboardButton(text="𝖦𝗅𝗂𝗍𝖼𝗁", callback_data="glitch"),
-            InlineKeyboardButton(text="𝖱𝖾𝗆𝗈𝗏𝖾 𝖡𝖦", callback_data="removebg")
+            InlineKeyboardButton(text="Iɴᴠᴇʀᴛ", callback_data="inverted"),
+            InlineKeyboardButton(text="Gʟɪᴛᴄʜ", callback_data="glitch"),
+            InlineKeyboardButton(text="Rᴇᴍᴏᴠᴇ ʙɢ", callback_data="removebg")
             ],[
-            InlineKeyboardButton(text="𝖢𝗅𝗈𝗌𝖾", callback_data="close_data")
+            InlineKeyboardButton(text="◁", callback_data="close_data")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.message.edit_text(        
