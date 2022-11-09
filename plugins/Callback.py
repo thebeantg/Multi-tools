@@ -196,7 +196,7 @@ async def callback(client: Client, query: CallbackQuery):
            parse_mode='html'           
        )            
     elif query.data == "source":
-       users = await get("https://api.github.com/repos/jeolpaul/TG-MULTI-BOT/contributors")
+       users = await get("https://api.github.com")
        list_of_users = ""
        count = 1
        for user in users:
