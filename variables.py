@@ -10,9 +10,9 @@ API_ID = int(os.environ.get("API_ID", ""))
 
 API_HASH = os.environ.get("API_HASH", "")
 
-PICS = os.environ.get("PICS", "https://telegra.ph/file/34fd203eb89fd747ffb57.jpg").split()
+PICS = os.environ.get("PICS", "https://telegra.ph/file/a6e30f36d05317d87bbc1.jpg").split()
 
-ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '900873119').split()]
+ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5104213780').split()]
 
 DB_URL = os.environ.get("DB_URL", "")
 
