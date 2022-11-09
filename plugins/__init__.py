@@ -5,20 +5,27 @@ I'am A Multi use Bot with many usefull features.
 Eg:- Telegarph, Channel ID, Image editor etc... """
 
     ABT = """ 
-╔════❰ 𝙼𝚄𝙻𝚃𝙸 𝙱𝙾𝚃 ❱═❍
+╔════❰ {bot} ❱═❍
+
 ║╭━━━━━━━━━━━━━━━➣
-║┣⪼🤖ᴍʏ ɴᴀᴍᴇ : {bot}
-║┣⪼👦ᴅᴇᴠ 1 : <a href=https://t.me/about_jeol>ᴊᴇᴏʟ</a>
-║┣⪼👨‍💻ᴅᴇᴠ 2 : <a href=https://t.me/mr_MKN>ᴍʀ.ᴍᴋɴ ᴛɢ</a>
-║┣⪼❣️sᴏᴜʀᴄᴇ ᴄᴏᴅ : <a href=https://github.com/Jeolpaul/TG-MULTI-BOT>ᴛɢ-ᴍᴜʟᴛɪ-ʙᴏᴛ</a>
-║┣⪼📡ʜᴏsᴛᴇᴅ ᴏɴ : <a href=https://dashboard.heroku.com>ʜᴇʀᴏᴋᴜ</a>
-║┣⪼🗣️ʟᴀɴɢᴜᴀɢᴇ : <a href=https://www.python.org>ᴘʏᴛʜᴏɴ3</a>
-║┣⪼📚ʟɪʙʀᴀʀʏ : <a href=https://github.com/pyrogram>ᴘʏʀᴏɢʀᴀᴍ</a> 
-║┣⪼🗒️ᴠᴇʀsɪᴏɴ : 𝙼𝚄𝙻𝚃𝙸 𝙱𝙾𝚃 v3.0.1 
+
+║┣⪼ ᴍʏ ɴᴀᴍᴇ : {bot}
+
+║┣⪼ ᴅᴇᴠ : <a href=https://t.me/about_beantg>Bᴇᴀɴ</a>
+
+║┣⪼ sᴏᴜʀᴄᴇ ᴄᴏᴅ : <a href=https://graph.org/file/93c32d542399597c005e4.jpg>ʙᴏᴛ sᴏᴜʀᴄᴇ</a>
+
+║┣⪼ ʟᴀɴɢᴜᴀɢᴇ : <a href=https://www.python.org>ᴘʏᴛʜᴏɴ3</a>
+
+║┣⪼ ʟɪʙʀᴀʀʏ : <a href=https://github.com/pyrogram>ᴘʏʀᴏɢʀᴀᴍ</a> 
+
+║┣⪼ ᴠᴇʀsɪᴏɴ : {bot} v3.0.1 
+
 ║╰━━━━━━━━━━━━━━━➣
+
 ╚══════════════════❍ """
 
-    HELP = """𝙷𝙴𝚁𝙴 𝙸𝚂 𝙼𝚈 𝙷𝙴𝙻𝙿 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
+    HELP = """ʜᴇʀᴇ ɪꜱ ᴍy ʜᴇʟᴩ ᴄᴏᴍᴍᴀɴᴅꜱ."""
 
     INFO = """◉ just send /id or info to get your tg id & info 🍁
 
@@ -32,7 +39,7 @@ media = [photo, video, audio, documents, sticker]"""
     FUN = """<b><u>JUST TEST THIS COMMANDS 😉</u></b>
 
 ◉ /runs         
-◉ /ikka      
+
 ◉ /dice     
 ◉ /arrow    
 ◉ /goal    
@@ -83,8 +90,8 @@ Convert sticker to photo & create sticker pake & find sticker id.....
 To Make Square Logo -  /logosq Your Name
 
 ♻️ Example:
-/logo BETAs
-/logosq MKN  """
+/logo Hell
+/logosq Heaven  """
 
     YTDL = """<b>𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙾𝙳𝚄𝙻𝙴</b>
 
