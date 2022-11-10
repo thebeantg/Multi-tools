@@ -130,7 +130,9 @@ Translate text to speech
 • These commands works on both pm and group.
 • this can translate texts to 200+ languages."""
 
-    SOURCE = """[𝙃𝙚𝙡𝙡 𝘽𝙤𝙩𝙯](https://t.me/hell_botz)/n[𝙃𝙚𝙡𝙡 𝘽𝙤𝙩𝙯 𝙎𝙪𝙥𝙥𝙤𝙧𝙩](https://t.me/hellbotsupport)
+    SOURCE = """๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ʜᴇʟᴩ ᴀɴᴅ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍᴇ.
+
+ɪғ ʏᴏᴜ ғᴏᴜɴᴅ ᴀɴʏ ʙᴜɢ ɪɴ 𝗠𝗨𝗟𝗧𝗜 𝗨𝗦𝗔𝗚𝗘 𝗕𝗢𝗧 ᴏʀ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ɢɪᴠᴇ ғᴇᴇᴅʙᴀᴄᴋ ᴀʙᴏᴜᴛ ᴛʜᴇ 𝗠𝗨𝗟𝗧𝗜 𝗨𝗦𝗔𝗚𝗘 𝗕𝗢𝗧, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴀᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ @hellbotsupport.
 
 """
 
