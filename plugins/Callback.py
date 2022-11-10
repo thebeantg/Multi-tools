@@ -37,25 +37,19 @@ async def callback(client: Client, query: CallbackQuery):
        )
     elif query.data == "help":
         buttons = [[                           
-            InlineKeyboardButton('ɪɴꜰᴏ & ɪᴅ', callback_data='info')
-            ],[
-            InlineKeyboardButton('ʟᴏɢᴏ ᴍᴀᴋᴇʀ', callback_data='logomake'),            
-            InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴩʜ', callback_data='tgraph')
-            ],[
-            InlineKeyboardButton('ᴛᴇxᴛ ᴛᴏ ᴠᴏɪᴄᴇ', callback_data='tts'),
+            InlineKeyboardButton('ɪɴꜰᴏ & ɪᴅ', callback_data='info'),
+            InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴩʜ', callback_data='tgraph'),
             InlineKeyboardButton('yᴏᴜᴛᴜʙᴇ ᴅʟ', callback_data='ytdl')
             ],[
-            InlineKeyboardButton('ᴩʜᴏᴛᴏ ᴛᴏᴏʟ', callback_data='phediter'),
-            InlineKeyboardButton('ᴩᴀꜱᴛᴇ ᴄᴏᴅᴇ', callback_data='paster')
-            ],[
             InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ ᴛᴏᴏʟ', callback_data='stickertool'),
-            InlineKeyboardButton('ꜰᴏɴᴛ ꜱᴛyʟᴇ', callback_data='fontstyle')            
+            InlineKeyboardButton('ꜰᴏɴᴛ ꜱᴛyʟᴇ', callback_data='fontstyle'),
+            InlineKeyboardButton('ꜰᴜɴ ɢᴀᴍᴇ', callback_data='fun')
             ],[
             InlineKeyboardButton('ᴄᴀʀʙᴏɴ', callback_data='carben'),
-            InlineKeyboardButton('ꜰᴜɴ ɢᴀᴍᴇ', callback_data='fun')                      
+            InlineKeyboardButton('ᴩʜᴏᴛᴏ ᴛᴏᴏʟ', callback_data='phediter'),
+            InlineKeyboardButton('ꜰᴜɴ ɢᴀᴍᴇ', callback_data='fun')
             ],[
             InlineKeyboardButton('◁', callback_data='start'),
-                       
         ]]
         await query.message.edit_text(                     
             text=tg.HELP,
