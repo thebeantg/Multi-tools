@@ -27,7 +27,11 @@ class txt(object):
 
 """
 
-    HELP = """ʜᴇʀᴇ ɪꜱ ᴍy ʜᴇʟᴩ ᴄᴏᴍᴍᴀɴᴅꜱ."""
+    HELP = """
+    𝙈𝙐𝙇𝙏𝙄 𝙐𝙎𝘼𝙂𝙀 𝘽𝙊𝙏 ꜰᴇᴀᴛᴜʀᴇs
+    » ᴄʜᴇᴄᴋᴏᴜᴛ ᴀʟʟ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs 
+    » ᴀʟʟ ᴏꜰ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ / 
+    » ɪꜰ ʏᴏᴜ ɢᴏᴛ ᴀɴʏ ɪssᴜᴇ ᴏʀ ʙᴜɢ ɪɴ ᴀɴʏ ᴄᴏᴍᴍᴀɴᴅ ᴘʟᴇᴀsᴇ ʀᴇᴘᴏʀᴛ ɪᴛ ᴛᴏ @Hellbotsupport"""
 
     INFO = """◉ just send /id or info to get your tg id & info 🍁
 
