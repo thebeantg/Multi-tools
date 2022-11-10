@@ -69,9 +69,9 @@ def song(client, message):
         rep = f"""
 
     **ᴛɪᴛʟᴇ :** [{thum}]({mo})
-    **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}`
-    **ᴠɪᴇᴡs :** `{views}`
     **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ »** {message.from_user.mention}
+    @Tgraph_rbot
+    
     """
     
 
@@ -154,10 +154,12 @@ async def vsong(client, message: Message):
     file_stark = f"{ytdl_data['id']}.mp4"
     capy = f"""
     **ᴛɪᴛʟᴇ :** [{thum}]({mo})
-    **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}`
-    **ᴠɪᴇᴡs :** `{views}`
     **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ »** {message.from_user.mention}
+    
+    @Tgraph_rbot
+
     """
+    
 
 
     await client.send_video(
