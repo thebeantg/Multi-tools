@@ -36,7 +36,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply("**ѕєαrchíng чσur ѕσng...!**")
+    m = message.reply("**🔎**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -56,17 +56,17 @@ def song(client, message):
 
     except Exception as e:
         m.edit(
-            "**𝙵𝙾𝚄𝙽𝙳 𝙽𝙾𝚃𝙷𝙸𝙽𝙶 𝙿𝙻𝙴𝙰𝚂𝙴 𝙲𝙾𝚁𝚁𝙴𝙲𝚃 𝚃𝙷𝙴 𝚂𝙿𝙴𝙻𝙻𝙸𝙽𝙶 𝙾𝚁 𝚂𝙴𝙰𝚁𝙲𝙷 𝙰𝙽𝚈 𝙾𝚃𝙷𝙴𝚁 𝚂𝙾𝙽𝙶**"
+            "**ꜰᴏᴜɴᴅ ɴᴏᴛʜɪɴɢ ᴩʟᴇᴀꜱᴇ ᴄᴏʀʀᴇᴄᴛ ᴛʜᴇ ꜱᴩᴇʟʟɪɴɢ ᴏʀ ꜱᴇᴀʀᴄʜ ᴀɴy ᴏᴛʜᴇʀ ꜱᴏɴɢ**"
         )
         print(str(e))
         return
-    m.edit("**dσwnlσαdíng чσur ѕσng...!**")
+    m.edit("**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ yᴏᴜʀ ꜱᴏɴɢ...!**")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"**ᴛɪᴛʟᴇ :** {title[:25]}\n**ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}`\n**ᴠɪᴇᴡs :** `{views}`\n**ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ »** {message.from_user.mention}"
+        rep = f"**ᴛɪᴛʟᴇ :** {title[:25]}\n**ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}`\n**ᴠɪᴇᴡs :** `{views}`\n**ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ »** {}"
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -74,7 +74,7 @@ def song(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit("**🚫 𝙴𝚁𝚁𝙾𝚁 🚫**")
+        m.edit("**‼️ ᴇʀʀᴏʀ ‼️**")
         print(e)
 
     try:
@@ -104,10 +104,10 @@ async def vsong(client, message: Message):
     urlissed = get_text(message)
 
     pablo = await client.send_message(
-        message.chat.id, f"**𝙵𝙸𝙽𝙳𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 𝚅𝙸𝙳𝙴𝙾** `{urlissed}`"
+        message.chat.id, f"**🔎** `{urlissed}`"
     )
     if not urlissed:
-        await pablo.edit("Invalid Command Syntax Please Check help Menu To Know More!")
+        await pablo.edit("Iɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ ꜱyɴᴛᴀx ᴩʟᴇᴀꜱᴇ ᴄʜᴇᴄᴋ ʜᴇʟᴩ ᴍᴇɴᴜ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ!")
         return
 
     search = SearchVideos(f"{urlissed}", offset=1, mode="dict", max_results=1)
@@ -137,12 +137,12 @@ async def vsong(client, message: Message):
         with YoutubeDL(opts) as ytdl:
             ytdl_data = ytdl.extract_info(url, download=True)
     except Exception as e:
-        await event.edit(event, f"**𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙵𝚊𝚒𝚕𝚎𝚍 𝙿𝚕𝚎𝚊𝚜𝚎 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗..♥️** \n**Error :** `{str(e)}`")
+        await event.edit(event, f"**ᴅᴏᴡɴʟᴏᴀᴅ ꜰᴀɪʟᴇᴅ ᴩʟᴇᴀꜱᴇ ᴛʀy ᴀɢᴀɪɴ** \n**Error :** `{str(e)}`")
         return
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"""
-"❄ **ᴛɪᴛʟᴇ :** [{thum}]({mo})\n💫 **ᴄʜᴀɴɴᴇʟ :** {thums}\n✨ **sᴇᴀʀᴄʜᴇᴅ :** {urlissed}\n🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}"""
+    capy = f"**ᴛɪᴛʟᴇ :** {title[:25]}\n**ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}`\n**ᴠɪᴇᴡs :** `{views}`\n**ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ »** {}"
+
 
     await client.send_video(
         message.chat.id,
