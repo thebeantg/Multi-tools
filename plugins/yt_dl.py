@@ -66,13 +66,11 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"""
+        rep = f"""**ᴛɪᴛʟᴇ :** [{thum}]({mo})
+        **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ »** {message.from_user.mention}
+        @Tgraph_rbot
+        """
 
-    **ᴛɪᴛʟᴇ :** [{thum}]({mo})
-    **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ »** {message.from_user.mention}
-    @Tgraph_rbot
-    
-    """
     
 
 
@@ -152,13 +150,16 @@ async def vsong(client, message: Message):
         return
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"""
-    **ᴛɪᴛʟᴇ :** [{thum}]({mo})
+    capy = f"""**ᴛɪᴛʟᴇ :** [{thum}]({mo})
     **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ »** {message.from_user.mention}
-    
     @Tgraph_rbot
-
     """
+    
+    
+    
+    
+
+    
     
 
 
