@@ -19,9 +19,9 @@ async def info(motech, msg):
         text += f'\n\n➥ ɴᴀᴍᴇ : {msg.forward_from["first_name"]}'
         if msg.forward_from["username"]:
 
-            text += f'\n\n➥ ᴜꜱᴇʀɴᴀᴍᴇ : @{msg.forward_from["username"]} \n\n🆔 ID : <code>{msg.forward_from["id"]}</code>\n\n💫DC : {msg.forward_from["dc_id"]}'           
+            text += f'\n\n➥ ᴜꜱᴇʀɴᴀᴍᴇ : @{msg.forward_from["username"]} \n\n➥ ɪᴅ : <code>{msg.forward_from["id"]}</code>\n\n➥ ᴅᴄ : {msg.forward_from["dc_id"]}'           
         else:
-            text += f'\n\n➥ ɪᴅ : `{msg.forward_from["id"]}`\n\n\n\n💫DC : {msg.forward_from["dc_id"]}'
+            text += f'\n\n➥ ɪᴅ : `{msg.forward_from["id"]}`\n\n\n\n➥ ᴅᴄ : {msg.forward_from["dc_id"]}'
 
         await msg.reply(text, quote=True)
     else:
@@ -41,7 +41,7 @@ async def info(motech, msg):
             if msg.forward_from_chat["username"]:
 
                 text += f'\n\n➥ ᴜꜱᴇʀɴᴀᴍᴇ : @{msg.forward_from_chat["username"]}'
-                text += f'\n\n➥ ɪᴅ : `{msg.forward_from_chat["id"]}`\n\n💫DC : {msg.forward_from_chat["dc_id"]}'
+                text += f'\n\n➥ ɪᴅ : `{msg.forward_from_chat["id"]}`\n\n➥ ᴅᴄ : {msg.forward_from_chat["dc_id"]}'
             else:
                 text += f'\n\n➥ ɪᴅ `{msg.forward_from_chat["id"]}`\n\n{msg.forward_from_chat["dc_id"]}'                                           
 
