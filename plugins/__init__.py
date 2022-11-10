@@ -5,25 +5,27 @@ class txt(object):
  𝘐'𝘢𝘮 𝘈 𝘔𝘶𝘭𝘵𝘪 𝘶𝘴𝘦 𝘉𝘰𝘵 𝘸𝘪𝘵𝘩 𝘮𝘢𝘯𝘺 𝘶𝘴𝘦𝘧𝘶𝘭𝘭 𝘧𝘦𝘢𝘵𝘶𝘳𝘦𝘴. 𝘈𝘭𝘭 𝘰𝘧 𝘮𝘺 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴 𝘢𝘳𝘦 𝘭𝘪𝘴𝘵𝘦𝘥 𝘪𝘯 𝘵𝘩𝘦 𝘩𝘦𝘭𝘱 𝘣𝘶𝘵𝘵𝘰𝘯 😌"""
 
     ABT = """ 
-╔════❰ ᴀʙᴏᴜᴛ ❱═❍
+➥ ᴍʏ ɴᴀᴍᴇ : {bot}
 
-║╭━━━━━━━━━━━━━━━➣
+➥ ᴅᴇᴠ : <a href=https://t.me/about_beantg>Bᴇᴀɴ</a>
 
-║┣⪼ ᴍʏ ɴᴀᴍᴇ : {bot}
+➥ sᴏᴜʀᴄᴇ ᴄᴏᴅ : <a href=https://graph.org/file/93c32d542399597c005e4.jpg>ʙᴏᴛ sᴏᴜʀᴄᴇ</a>
 
-║┣⪼ ᴅᴇᴠ : <a href=https://t.me/about_beantg>Bᴇᴀɴ</a>
+➥ ʟᴀɴɢᴜᴀɢᴇ : <a href=https://www.python.org>ᴘʏᴛʜᴏɴ3</a>
 
-║┣⪼ sᴏᴜʀᴄᴇ ᴄᴏᴅ : <a href=https://graph.org/file/93c32d542399597c005e4.jpg>ʙᴏᴛ sᴏᴜʀᴄᴇ</a>
+➥ ʟɪʙʀᴀʀʏ : <a href=https://github.com/pyrogram>ᴘʏʀᴏɢʀᴀᴍ</a> 
 
-║┣⪼ ʟᴀɴɢᴜᴀɢᴇ : <a href=https://www.python.org>ᴘʏᴛʜᴏɴ3</a>
+➥ ᴠᴇʀsɪᴏɴ : {bot} v3.0.1
 
-║┣⪼ ʟɪʙʀᴀʀʏ : <a href=https://github.com/pyrogram>ᴘʏʀᴏɢʀᴀᴍ</a> 
 
-║┣⪼ ᴠᴇʀsɪᴏɴ : v3.0.1 
 
-║╰━━━━━━━━━━━━━━━➣
 
-╚══════════════════❍ """
+
+
+
+
+
+"""
 
     HELP = """ʜᴇʀᴇ ɪꜱ ᴍy ʜᴇʟᴩ ᴄᴏᴍᴍᴀɴᴅꜱ."""
 
@@ -124,12 +126,9 @@ Translate text to speech
 • These commands works on both pm and group.
 • this can translate texts to 200+ languages."""
 
-    SOURCE = """[Github](https://github.com) | [Updates](t.me/hell_botz)
-```----------------
-| Contributors |
-----------------```
+    SOURCE = """[𝙃𝙚𝙡𝙡 𝘽𝙤𝙩𝙯](https://t.me/hell_botz)/n[𝙃𝙚𝙡𝙡 𝘽𝙤𝙩𝙯 𝙎𝙪𝙥𝙥𝙤𝙧𝙩](https://t.me/hellbotsupport)
 
-{dev} """
+"""
 
     INFO_TXT = """<i>
 <u>👁️‍🗨️YOUR DETAILS</u>
@@ -140,5 +139,6 @@ Translate text to speech
 ○ UserName : @{u}
 ○ link : <code>https://t.me/{u}</code>
 
-[MULTI @hell_botz</i>"""
+<a href=https://t.me/Tgraph_rbot>𝙈𝙐𝙇𝙏𝙄 𝙐𝙎𝘼𝙂𝙀 𝘽𝙊𝙏</a>
+</i>"""
 
