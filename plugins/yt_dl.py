@@ -85,7 +85,7 @@ def song(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit("**‼️ ᴇʀʀᴏʀ ‼️**")
+        m.edit("** ᴇʀʀᴏʀ **")
         print(e)
 
     try:
@@ -115,7 +115,7 @@ async def vsong(client, message: Message):
     urlissed = get_text(message)
 
     pablo = await client.send_message(
-        message.chat.id, f"**🔎** `{urlissed}`"
+        message.chat.id, f"**ꜱᴇᴀʀᴄʜɪɴ...** `{urlissed}`"
     )
     if not urlissed:
         await pablo.edit("Iɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ ꜱyɴᴛᴀx ᴩʟᴇᴀꜱᴇ ᴄʜᴇᴄᴋ ʜᴇʟᴩ ᴍᴇɴᴜ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ!")
