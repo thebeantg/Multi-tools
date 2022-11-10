@@ -190,7 +190,7 @@ async def callback(client: Client, query: CallbackQuery):
            parse_mode='html'           
        )            
     elif query.data == "source":
-       users = await get("https://api.github.com")
+       users = await get("https://api.github.com/repos/Mrbeanbot/Mrbeanbot/contributors")
        list_of_users = ""
        count = 1
        for user in users:
