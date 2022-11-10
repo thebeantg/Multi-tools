@@ -26,7 +26,7 @@ async def carbon_func(_, message):
     await m.edit("ᴜᴘʟᴏᴀᴅɪɴɢ..")
     await message.reply_photo(
         photo=carbon,
-        caption="**Mᴀᴅᴇ ʙy [MULTI TOOLS BOT](http://t.me/MULTI_TOOLS_RBOT)**",
+        caption="**Mᴀᴅᴇ ʙy [𝙈𝙐𝙇𝙏𝙄 𝙐𝙎𝘼𝙂𝙀 𝘽𝙊𝙏](http://t.me/Tgraph_Rbot)**",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("ᴊᴏɪɴ", url="https://t.me/hell_botz")                  
             ]]
