@@ -17,13 +17,13 @@ async def start_message(bot, message):
         photo=random.choice(PICS),
         caption=txt.STAT.format(message.from_user.mention),
         reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("ʜᴇʟᴩ & ᴄᴍᴅꜱ", callback_data="help"),
+            InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", callback_data="source")
+            ],[            
             InlineKeyboardButton("ꜱᴜᴩᴩᴏʀᴛ", url="https://t.me/hellbotsupport"),
             InlineKeyboardButton("ᴜᴩᴅᴀᴛᴇꜱ", url="https://t.me/Hell_BoTZ")
-            ],[            
-            InlineKeyboardButton("ʜᴇʟᴩ", callback_data="help"),
-            InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about")
             ],[
-            InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", callback_data="source")   
+            InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about")   
             ]]
             )
         )
@@ -59,8 +59,8 @@ async def media_info(bot, m):
                                         
     if not md:
         buttons = [[
-            InlineKeyboardButton("Support", url="https://t.me/hellbotsupport"),
-            InlineKeyboardButton("Updates", url="https://t.me/hell_boTZ")
+            InlineKeyboardButton("ꜱᴜᴩᴩᴏʀᴛ", url="https://t.me/hellbotsupport"),
+            InlineKeyboardButton("ᴜᴩᴅᴀᴛᴇꜱ", url="https://t.me/hell_boTZ")
         ]]            
         await m.reply("please wait....")
         await asyncio.sleep(3)
