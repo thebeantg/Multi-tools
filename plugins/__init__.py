@@ -28,7 +28,7 @@ class txt(object):
 """
 
     HELP = """
-    𝙈𝙐𝙇𝙏𝙄 𝙐𝙎𝘼𝙂𝙀 𝘽𝙊𝙏 ꜰᴇᴀᴛᴜʀᴇs
+    𝗠𝗨𝗟𝗧𝗜 𝗨𝗦𝗔𝗚𝗘 𝗕𝗢𝗧 ꜰᴇᴀᴛᴜʀᴇs
     » ᴄʜᴇᴄᴋᴏᴜᴛ ᴀʟʟ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs 
     » ᴀʟʟ ᴏꜰ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ / 
     » ɪꜰ ʏᴏᴜ ɢᴏᴛ ᴀɴʏ ɪssᴜᴇ ᴏʀ ʙᴜɢ ɪɴ ᴀɴʏ ᴄᴏᴍᴍᴀɴᴅ ᴘʟᴇᴀsᴇ ʀᴇᴘᴏʀᴛ ɪᴛ ᴛᴏ @Hellbotsupport"""
@@ -134,15 +134,19 @@ Translate text to speech
 
 """
 
-    INFO_TXT = """<i>
-<u>👁️‍🗨️YOUR DETAILS</u>
+    INFO_TXT = """
+👁️‍🗨️ 𝗨𝗦𝗘𝗥 𝗜𝗡𝗙𝗢
 
-○ ID : <code>{id}</code>
-○ DC : <code>{dc}</code>
-○ First Name : <code>{n}<code>
-○ UserName : @{u}
-○ link : <code>https://t.me/{u}</code>
+➥ ɪᴅ : <code>{id}</code>
 
-<a href=https://t.me/Tgraph_rbot>𝙈𝙐𝙇𝙏𝙄 𝙐𝙎𝘼𝙂𝙀 𝘽𝙊𝙏</a>
-</i>"""
+➥ ᴅᴄ : <code>{dc}</code>
+
+➥ ꜰɪʀꜱᴛ ɴᴀᴍᴇ : <code>{n}<code>
+
+➥ ᴜꜱᴇʀɴᴀᴍᴇ : @{u}
+
+➥ ʟɪɴᴋ : <code>https://t.me/{u}</code>
+
+<a href=https://t.me/Tgraph_rbot>𝗠𝗨𝗟𝗧𝗜 𝗨𝗦𝗔𝗚𝗘 𝗕𝗢𝗧</a>
+"""
 
