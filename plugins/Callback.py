@@ -25,13 +25,13 @@ async def callback(client: Client, query: CallbackQuery):
        await query.message.edit(
            text = tg.STAT.format(query.from_user.mention),        
            reply_markup=InlineKeyboardMarkup( [[
+               InlineKeyboardButton("ʜᴇʟᴩ & ᴄᴍᴅꜱ", callback_data="help"),
+               InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", callback_data="source")
+               ],[            
                InlineKeyboardButton("ꜱᴜᴩᴩᴏʀᴛ", url="https://t.me/Hellbotsupport"),
                InlineKeyboardButton("ᴜᴩᴅᴀᴛᴇꜱ", url="https://t.me/hell_botz")
-               ],[            
-               InlineKeyboardButton("ʜᴇʟᴩ", callback_data="help"),
-               InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about")
                ],[
-               InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀꜱ", callback_data="source")   
+               InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about")   
                ]]
                )
        )
@@ -204,9 +204,9 @@ async def callback(client: Client, query: CallbackQuery):
            count += 1
        buttons = [[
            InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/about_beantg"),
-           InlineKeyboardButton("ʙᴏᴛᴢ", url="https://t.me/hell_botz")
+           InlineKeyboardButton("ʜᴇʟʟ ʙᴏᴛᴢ", url="https://t.me/hell_botz")
            ],[
-           InlineKeyboardButton("ꜱᴏᴜʀᴄᴇ", url="https://graph.org/file/93c32d542399597c005e4.jpg"),
+           InlineKeyboardButton("ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://graph.org/file/93c32d542399597c005e4.jpg"),
            ],[
            InlineKeyboardButton("◁", callback_data="start"),
            InlineKeyboardButton("↻ ᴄʟᴏꜱᴇ ↻", callback_data="close")
