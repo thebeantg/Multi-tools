@@ -86,7 +86,7 @@ async def media_info(bot, m):
 
 @Client.on_message(filters.command("repo"))
 async def repo(client, message):
-    users = await get("https://api.github.com/repos")
+    users = await get("https://api.github.com/repos/https://github.com/Mrbeanbot/Mrbeanbot/contributors")
     list_of_users = ""
     count = 1
     for user in users:
