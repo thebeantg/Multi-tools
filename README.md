@@ -24,7 +24,7 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagraph, sticke
 
 ---------
 ### Developer
-<a href="https://t.me/about_beantg"><img src="https://img.shields.io/badge/JP%20 BEAN-ReD.svg?style=for-the-badge&logo=Python"></a>
+<a href="https://t.me/about_beantg"><img src="https://img.shields.io/badge/BEAN-ReD.svg?style=for-the-badge&logo=Python"></a>
 
 ---------
 <p align="center">
