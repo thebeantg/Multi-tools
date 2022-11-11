@@ -20,8 +20,7 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagraph, sticke
 
 ## Deploy on railway
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/pNyrwc?referralCode=kHR7tl)
-
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/s3TJTK?referralCode=yIBRKN)
 ---------
 ### Developer
 <a href="https://t.me/about_beantg"><img src="https://img.shields.io/badge/BEAN-ReD.svg?style=for-the-badge&logo=Python"></a>
