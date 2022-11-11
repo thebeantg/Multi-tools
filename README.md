@@ -15,7 +15,7 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagraph, sticke
 
 ⚠️ Edit readme.md templates= link to your repo link and deploy  🙏 avoid source code violation 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Mrbeanbot/TG-MULTIPLE-BOT)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Hell-botz/Multi-tools)
 
 
 ## Deploy on railway
@@ -23,9 +23,9 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagraph, sticke
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/pNyrwc?referralCode=kHR7tl)
 
 ---------
-### Developers 
-<a href="https://t.me/about_jeol"><img src="https://img.shields.io/badge/JP%20 JEOL-ReD.svg?style=for-the-badge&logo=Python"></a>
-<a href="https://t.me/mr_MKN"><img src="https://img.shields.io/badge/MR%20 MKN-ReD.svg?style=for-the-badge&logo=Python"></a>
+### Developer
+<a href="https://t.me/about_beantg"><img src="https://img.shields.io/badge/JP%20 BEAN-ReD.svg?style=for-the-badge&logo=Python"></a>
+
 ---------
 <p align="center">
   <a href="https://www.python.org">
@@ -39,7 +39,7 @@ This is a pyrogram based telagram bot. Telagram user id, info, telagraph, sticke
 </p>
 
 ## Support & Updates 
-<a href="https://t.me/BETA_SUPPORT"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/BETA_BOTZ"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/Hellbotsupport"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/hell_botz"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
   
 
 
